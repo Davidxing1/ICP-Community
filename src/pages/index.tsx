@@ -16,7 +16,7 @@ const IndexPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-          {/*<Home></Home>*/}
+          <Home></Home>
           <Link
               href='/'
               locale={router.locale === 'en' ? 'de' : 'en'}

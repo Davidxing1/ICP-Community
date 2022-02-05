@@ -3,12 +3,20 @@ import { Provider } from 'react-redux';
 import type { AppProps } from 'next/app';
 import store from '../app/store';
 import { appWithTranslation } from 'next-i18next';
+import { GraphQLClient, ClientContext } from 'graphql-hooks'
+
+const client = new GraphQLClient({
+    url: 'https://mintbase-testnet.hasura.app/v1/graphql'
+})
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
+      <ClientContext.Provider value={client}>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
+      </ClientContext.Provider>
   )
 }
 

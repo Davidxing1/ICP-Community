@@ -16,30 +16,21 @@ const IndexPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-          {/*<Home></Home>*/}
-          <Link
-              href='/'
-              locale={router.locale === 'en' ? 'de' : 'en'}
-          >
-              <footer>
-                  <p>{t('description')}</p>
-              </footer>
-          </Link>
+          <Home></Home>
+          {/*<Link*/}
+          {/*    href='/'*/}
+          {/*    locale={router.locale === 'en' ? 'de' : 'en'}*/}
+          {/*>*/}
+          {/*    <footer>*/}
+          {/*        <p>{t('description')}</p>*/}
+          {/*    </footer>*/}
+          {/*</Link>*/}
       </header>
     </div>
   )
 }
 
 export default IndexPage
-
-// export async function getStaticProps(locale) {
-//     // console.log(locale)
-//     return {
-//         props: {
-//             locale,
-//         }, // will be passed to the page component as props
-//     }
-// }
 
 export const getStaticProps = async ({ locale }) => ({
     props: {

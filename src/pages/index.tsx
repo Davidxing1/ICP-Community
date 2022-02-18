@@ -8,6 +8,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const IndexPage: NextPage = () => {
     const router = useRouter()
+    // console.log(router)
     const { t } = useTranslation('footer')
   return (
     <div>

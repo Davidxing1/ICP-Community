@@ -7,7 +7,9 @@ import { GraphQLClient, ClientContext } from 'graphql-hooks'
 
 const client = new GraphQLClient({
     // url: 'https://mintbase-testnet.hasura.app/v1/graphql'
-    url: 'https://api.subquery.network/sq/m00nbeans/marketplace-v3'
+    // url: 'https://api.subquery.network/sq/m00nbeans/marketplace-v3'
+    url: 'http://localhost:3000'
+
 })
 
 

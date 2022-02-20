@@ -1,8 +1,10 @@
+import Hello from "../../components/Hello";
+
 const Home = () =>{
     return (
-        <div>
-            1
-        </div>
+        <>
+            <Hello></Hello>
+        </>
     )
 }
 

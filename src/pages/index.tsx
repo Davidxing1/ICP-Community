@@ -5,6 +5,8 @@ import Head from 'next/head';
 import Home from "./home";
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Hello from "../components/Hello";
+import Brother from "../components/Brother";
 
 const IndexPage: NextPage = () => {
     const router = useRouter()
@@ -16,15 +18,16 @@ const IndexPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-          {/*<Home></Home>*/}
-          <Link
-              href='/'
-              locale={router.locale === 'en' ? 'de' : 'en'}
-          >
-              <footer>
-                  <p>{t('description')}</p>
-              </footer>
-          </Link>
+          <Home></Home>
+          <Brother></Brother>
+          {/*<Link*/}
+          {/*    href='/'*/}
+          {/*    locale={router.locale === 'en' ? 'de' : 'en'}*/}
+          {/*>*/}
+          {/*    <footer>*/}
+          {/*        <p>{t('description')}</p>*/}
+          {/*    </footer>*/}
+          {/*</Link>*/}
       </header>
     </div>
   )

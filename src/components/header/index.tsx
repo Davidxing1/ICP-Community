@@ -18,43 +18,15 @@ const navigation = [
 
 ]
 
-const publishingOptions = [
-  { title: 'Mainnet', href: 'https://api.devnet.solana.com', },
-  { title: 'Testnet', href: 'https://api.devnet.solana.com',  },
-  { title: 'Devnet', href: 'https://api.devnet.solana.com',  },
-]
 
 const Header=()=>{
 
 
   const [opentrue, setOpentrue] = useState(false)
-  //
-  //黑夜
-  const [enabled, setEnabled] = useState(false)
-  //背景图
-  const [img, setimg] = useState('/web3gw1.svg')
-  //
-  const [selected, setSelected] = useState(publishingOptions[0])
 
-  function dartchange() {
-    setEnabled(!enabled);
-    if(enabled){
-      document.documentElement.classList.remove('dark');
-      setimg("web3gb.svg")
-    }else{
-      document.documentElement.classList.add('dark');
-      setimg("web3gw1.svg")
-    }
-  }
 
   const login =() => {
     setOpentrue(true)
-
-  }
-  let net
-  const  getNet=()=>{
-    net =document.getElementById("NET").innerHTML
-    console.log(net)
 
   }
 
@@ -62,7 +34,7 @@ const Header=()=>{
   return(
     <header>
       <Popover className="relative bg-white  ">
-        <div className="flex  fixed z-20 inset-x-0 bg-black    transition duration-700 mb-10 pl-5 mb-5 justify-between items-center  p-3 md:p-3 sm:px-6 lg:justify-end md:space-x-10 lg:px-10  ">
+        <div className="flex  fixed z-20 inset-x-0 bg-black    transition duration-700 mb-10 pl-5  justify-between items-center  p-3 sm:px-6 lg:justify-end md:space-x-10 lg:px-10  ">
 
           <div className=" flex w-full justify-between lg:justify-start">
             <div className="flex justify-start  ">
@@ -70,8 +42,8 @@ const Header=()=>{
                 <a>
                   <span className="sr-only">Workflow</span>
                   <img
-                    className=" w-auto h-14  "
-                    src={img}
+                    className=" w-auto h-10 md:mt-3 "
+                    src="https://cdn.discordapp.com/attachments/897398778166906911/918367143777673216/viewfile.png"
                     alt=""
                   />
                 </a></Link>
@@ -153,8 +125,8 @@ const Header=()=>{
                   <div className="flex items-center justify-between">
                     <div>
                       <img
-                        className="h-14 w-auto"
-                        src={img}
+                        className="h-10 w-auto"
+                        src='https://cdn.discordapp.com/attachments/897398778166906911/918367494304038982/viewfile.png'
                         alt="Workflow"
                       />
                     </div>

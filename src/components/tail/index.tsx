@@ -102,10 +102,10 @@ const Tail=()=>{
                 </div>
                 <div>
                     <div  className="flex justify-center md:justify-end " >
-                    <img  src="/web3gw1.svg" alt=""/>
+                    <img className="w-64" src="https://cdn.discordapp.com/attachments/897398778166906911/918367143777673216/viewfile.png" alt=""/>
                     </div>
                     <div className="my-5 text-gray-500 text-sm text-center">
-                        The best block explorer of Web3Games
+                        The best block explorer of PlayerLink
                     </div>
                     <div className="flex justify-center md:justify-start mt-10">
                         {participate.map(item=>(
@@ -120,7 +120,7 @@ const Tail=()=>{
 
             </div>
             <div className="max-w-7xl mx-auto flex justify-center md:block md:pl-10 my-10 text-gray-500 pb-24 md:pb-0">
-            © 2021 Web3Games</div>
+            © 2022 PlayerLink</div>
         </div>
     )
 }

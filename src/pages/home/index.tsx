@@ -23,10 +23,10 @@ const Home = () =>{
             </button>
           </div>
         </div>
-          <div className=" mx-auto pt-20  ">
+          <div className=" mx-auto pt-16   ">
         <div className="md:flex  md:h-screen">
             <div className="flex justify-center px-2 bg-gradient-to-b from-gray-500 to-black  md:w-7/12">
-                <div className="my-auto ">
+                <div className=" mt-2  md:my-auto">
                     <img className="  h-96 rounded-full" src='https://d257b89266utxb.cloudfront.net/galaxy/images/snapfingersdao/1645975733461074648.png' alt='' />
 
                     <div className=" flex justify-center my-6 md:my-10 ">

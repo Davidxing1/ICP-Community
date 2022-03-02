@@ -1,84 +1,220 @@
 import React from "react"
 import Header from "../../components/header"
 import Tail from "../../components/tail"
+import Login from '../../components/login/inde';
+
+const spaces=[
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/galaxyspace/galaxyspace-logo-1640145282.png",
+    title:"Galaxy Space",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/logo/bsc-logo.png",
+    title:"BNB Chain",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/1635133810/1635133810-logo-1635133810.jpeg",
+    title:"Polygon Studios",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/1643707204/1643707204-logo-1643707204.png",
+    title:"Solana",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/1639437714/1639437714-logo-1639437713.png",
+    title:"CoinList",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/logo/yearn-icon.png",
+    title:"Yearn Finance",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/galaxyspace/galaxyspace-logo-1640145282.png",
+    title:"Galaxy Space",
+  },
+]
+const news=[
+  {
+    href:"",
+    img:"https://miro.medium.com/max/1400/1*S0H-5YYsChjLNXdcgSRrhw.jpeg",
+    title:" Project Galaxy Presents: 2022 is gonna be SOL Cool  ",
+    h1:" A Multichain Feast with over $1,000,000 Prize Pool, hosted by Galaxy, powered by Solana, featuring 27 top-notched protocols in the Solana universe",
+    time:" Friday, February 11, 2022",
+  },
+  {
+    href:"",
+    img:"https://miro.medium.com/max/1400/1*S0H-5YYsChjLNXdcgSRrhw.jpeg",
+    title:" Project Galaxy Presents: 2022 is gonna be SOL Cool  ",
+    h1:" A Multichain Feast with over $1,000,000 Prize Pool, hosted by Galaxy, powered by Solana, featuring 27 top-notched protocols in the Solana universe",
+    time:" Friday, February 11, 2022",
+  },
+  {
+    href:"",
+    img:"https://miro.medium.com/max/1400/1*S0H-5YYsChjLNXdcgSRrhw.jpeg",
+    title:" Project Galaxy Presents: 2022 is gonna be SOL Cool  ",
+    h1:" A Multichain Feast with over $1,000,000 Prize Pool, hosted by Galaxy, powered by Solana, featuring 27 top-notched protocols in the Solana universe",
+    time:" Friday, February 11, 2022",
+  },
+  {
+    href:"",
+    img:"https://miro.medium.com/max/1400/1*v0AzFkdVAk657wOSEFBvdg.png",
+    title:" Project Galaxy Presents: 2022 is gonna be SOL Cool  ",
+    h1:" A Multichain Feast with over $1,000,000 Prize Pool, hosted by Galaxy, powered by Solana, featuring 27 top-notched protocols in the Solana universe",
+    time:" Friday, February 11, 2022",
+  },
+
+
+]
 
 
 const Home = () =>{
+
     return (
-      <div className="mx-auto bg-gray-50 dark:bg-current  transition duration-700">
+      <div className="mx-auto  dark:bg-current  transition duration-700">
             <Header></Header>
-        <div className="px-4 w-full md:hidden border-t border-gray-700 fixed z-20 bottom-0 bg-gray-900">
-          <div className="text-center my-2 text-gray-400" >
-            You are NOT eligible
-          </div>
-          <div className="text-sm text-center mb-2 text-gray-400 flex">
-            Minting transaction fee is covered by
-            <div className="text-blue-500 pl-1">
-              <a href=''>Project Galaxy</a>
-            </div>
-          </div>
-          <div className="flex justify-center mb-2  mx-auto">
-            <button  className="bg-blue-600  font-semibold  w-full   py-3 text-white rounded-lg  ">
-              Connect Wallet
-            </button>
-          </div>
-        </div>
-          <div className=" mx-auto pt-16   ">
-        <div className="md:flex  md:h-screen">
-            <div className="flex justify-center px-2 bg-gradient-to-b from-gray-500 to-black  md:w-7/12">
-                <div className=" mt-2  md:my-auto">
-                    <img className="  h-96 rounded-full" src='https://d257b89266utxb.cloudfront.net/galaxy/images/snapfingersdao/1645975733461074648.png' alt='' />
+        <Login></Login>
 
-                    <div className=" flex justify-center my-6 md:my-10 ">
-                        <img  src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAeCAYAAAC7Q5mxAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOLSURBVHgB5Vr/ddQwDFZ4/Z/rBoEFuMcCDRPQxwIXWKDXBWjKAu0Gl2OBMgEJExQWIGWCY4IKqfb1Uje25Py48uB7T89tIsnyl8iynUsgAog4p4YlbV3ekPxIkqSG/xCJpECkZdQsSI5JZoJ6SbIek0zq/wTMQwvhlPr87bHPqTmCfYM6Tkkq7IdrtoeBIB8zkmNFf0XAR4kTwtfpCckGh+MM+pPHD/ASDYlSLBv4WwjkQeO46EUi2S3REoOGSAnZkxOI45O3RTSJZNNY28yKhOpJCVQGOQQLJXduLJW9Vin6mO2bwKT9xOHh8qQLNyRrEq6MUkV2wVXyha9auoMGU/nv7UhykgvB9Jz8F46veY9Y44BmvpHQoK2s1F55dPhpz3GXfi4KZTxu0eD4BhUTTz9cqDJJNI4aITC+n1rdhUenbPnzEcwEzIRY8g67SvDbRgZKkG6h8NdITqS5r8E48s4wjKUQT+Wxm+OAYjIlgaElQoPjksdYBWJJA3aF1dGsT1VzHo5EYBUwTkcmLxgQhufiTcSgC9gjgaEnygNaeO6VPci7QyCWRjDlNJ7JPeiKCY5EYB+UfcmzSDviEOfilm6FMjLYA4HPIB582pLbAHiHUcA4yIX7devvc5DRex8eBYw7NFhZG9/Tu7XXgycoHTFo0jdr6WvWhAxpyTRKCl+jDhrycnv/EP0DvO6IIcfIQeAIxQRHSuFvIKOktH2P5uUp4HF68I0PYA5UD0m+gn/79AseDoIbaZ9cK6+5OIGpgfLkHfvmSW/0wuk/RRmZJ/aqr621H57C1pE33dAQkwQ6iyHv0VYOlemL5pC3cqRBGdU+CPQ54gG/IbnwBYeGXA15jJXTr6Z4bDNA0gthFjnuNlQEclX7if3AW0ENeew/dfqVpg9E/YFqCMWkBEYMZggWHX2WqAgehx+KbmAiAu8X0vZTpGaB2gd80LluX0BTfY8Eu9q2Qz9LcoZlMAEO2v/waa4d2EdQfDNWgJ19ck+JLXKQT8DXaNK+FvRYJxN0zkC39BkONIcItzgMbL/0+NcsQdSny6g7YGC4K4Bp9sL0xlxS85LkCsxbFAPW56XDa+unCynIb8wXUMJ+Z6kVqksYGQe+GxTUDTXvcPfTjrew212003tLMA/iO5iUrSEM9rMSdD5DHE5B3nk8d/7neEvBJvgRLGqes2S+ArNd2+Lux0UcjOaL27+GP46dq+2sMjDMAAAAAElFTkSuQmCC' alt='' />
+        <div className="relative pt-16">
+          <div className="absolute inset-x-0 bottom-0    " />
+          <div className=" mx-auto  ">
+            <div className="relative sm:overflow-hidden">
+              <div className="absolute inset-0">
+                <img
+                  className="h-full w-full object-cover"
+                  src="https://cdn.discordapp.com/attachments/897398778166906911/900033418979594280/1.jpg"
+                  alt="People working on laptops"
+                />
+                <div className="absolute inset-0 bg-indigo-700 mix-blend-multiply" />
 
+              </div>
+
+              <div className="max-w-7xl relative px-5 py-16 sm:px-6 sm:py-24 lg:py-32 mx-auto md:flex justify-between ">
+                <div>
+                  <h1 className=" md:max-w-xs xl:max-w-xl mb-16">
+                    <span className="block text-white text-4xl  tracking-tight sm:text-5xl pb-6">THRIVE WITH</span>
+                    <span className="block text-white text-4xl  tracking-tight sm:text-5xl pb-6">DIGITAL CREDENTIALS</span>
+                    <span className="block text-white text-4xl  tracking-tight sm:text-5xl pb-12 flex" >
+                      IN
+                      <div className="ml-2 text-blue-400">
+                        WEB3</div></span>
+
+                  </h1>
+                  <div className="flex text-white text-xl">
+                    <div className="  mr-10 rounded-tl-md  rounded-bl-3xl rounded-br-md  rounded-tr-3xl  bg-gradient-to-r bg-blue-800">
+                    <button className=" px-7 py-3.5  rounded-tl-md  rounded-bl-3xl rounded-br-md  rounded-tr-3xl  bg-gradient-to-r from-blue-400 to-blue-600 transform transition duration-300  -translate-x-1 -translate-y-0.5 hover:-translate-x-0.5 hover:-translate-y-0">
+                      EXPLORE
+
+                    </button>
                     </div>
-                  <div className="hidden md:inline-block  px-4 ">
-                   <div className="mx-auto">
-                        <button  className="bg-blue-600 transition duration-700 font-semibold  w-full  px-4 py-3 text-white rounded-lg  flex justify-center">
-                            Connect Wallet
-                        </button>
+                    <div className="rounded-tl-md  rounded-bl-3xl rounded-br-md  rounded-tr-3xl border-2 border-indigo-600">
+                    <button className="px-7 py-3 rounded-tl-md  rounded-bl-3xl rounded-br-md  rounded-tr-3xl bg-indigo-800 border-2 border-blue-500 transform transition duration-300  -translate-x-1 -translate-y-1 hover:-translate-x-0 hover:-translate-y-0">
+                     CREATE
+                    </button>
                     </div>
-                    <div className="text-center mt-6 text-gray-300" >
-                        You are NOT eligible
+
+                  </div>
+
+                  <div className="md:flex mt-24">
+                    <a href='' className="flex  rounded-full bg-blue-600 bg-opacity-60 px-4 py-1  transform transition duration-300 hover:-translate-x-1 hover:bg-opacity-80 " >
+                    <div className="text-white font-semibold mr-3">
+                      News:
                     </div>
-                    <div className="text-sm text-center  text-gray-300 flex">
-                        Minting transaction fee is covered by
-                        <div className="text-blue-500 ml-1">
-                        <a href=''>Project Galaxy</a>
+                    <div className="text-gray-400 text-sm mt-0.5 truncate">
+                      Project Galaxy Presents: 2022 is gonna be SOL Cool
                     </div>
+                    <div>
+                      <i className="fa fa-arrow-right text-gray-200 ml-3" aria-hidden="true"></i>
+                    </div>
+                    </a>
+                    <div className="mt-5 md:mt-0 md:ml-5 flex text-white">
+                      <a href="" className="px-2.5 py-1 rounded-full bg-blue-600 bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
+                      <i className="fa fa-twitter mt-1.5 " aria-hidden="true"></i>
+                      </a>
+                      <a href="" className="px-2.5 py-1 rounded-full bg-blue-600 bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
+                        <i className="fa fa fa-medium mt-1.5 " aria-hidden="true"></i>
+                      </a>
+                      <a href="" className="px-2.5 py-1 rounded-full bg-blue-600 bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
+                        <i className="fa fa-telegram mt-1.5 " aria-hidden="true"></i>
+                      </a>
+
                     </div>
                   </div>
                 </div>
 
+              </div>
 
             </div>
-            <div className="bg-current md:w-8/12  md:pt-32 flex px-6 md:px-0 md:pl-16 ">
-                <div>
-                <div className="text-white font-semibold text-3xl">
-                    The end of Feb—Gift for Meta Cowboy
-                </div>
-                <div className="text-gray-400 mt-2 md:mt-6">
-                    The end of Feb—Gift for Meta Cowboy
-                </div>
-                <div className="text-gray-400">
-                    SnapFingersDAO wish all community member catch your cowboy!
-                </div>
-                <div className="text-indigo-600">
-                    <a href=''>
-                    Join SnapFingersDAO </a>
-                </div>
-                <div  className="text-indigo-600">
-                    <a href=''>
-                    Follow SnapFingersDAO Twitter</a>
-                </div>
-                <div className="text-white mt-4 md:mt-8">
-                    6666 NFTs have been minted.
-                </div>
-                </div>
-            </div>
+            <div className="bg-black bg-opacity-90">
+            <div className="max-w-7xl relative px-5 py-16  sm:px-6 sm:py-24 lg:py-32 mx-auto ">
+              <div>
+              <div className="flex justify-between">
+               <div className="text-white text-3xl">
+                 SPACES
+               </div>
+                <a href="" className="text-blue-400 text-xl mt-2">
+                  View All
+                </a>
+              </div>
+
+              <div className="mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
+                {spaces.map(item=>(
+                <a key={item.a} href={item.a} className="bg-gray-700  rounded-lg p-5 transform transition duration-300  hover:scale-105">
+                  <div className="">
+                  <img className="rounded-full mx-auto w-24 h-24"
+                    src={item.img} alt='' />
+                  </div>
+                    <div className="text-white text-center mt-2">
+                      {item.title}
+                  </div>
+                </a>
+                ))}
+
+              </div>
             </div>
 
+              <div className="mt-32">
+                <div className="flex justify-between">
+                  <div className="text-white text-3xl">
+                    GALAXY NEWS
+                  </div>
+                  <a href="" className="text-blue-400 text-xl mt-2">
+                    View All
+                  </a>
+                </div>
+                <div className="mt-16 flex md:grid md:grid-cols-2 gap-4  xl:grid xl:grid-cols-4 gap-4 xl:gap-10 overflow-x-auto md:overflow-visible">
+                  {news.map(item=>(
+
+                    <a key={item.href} href={item.href} className="bg-gray-700    rounded-lg  transform transition duration-300  hover:scale-105">
+                      <div className="w-80 md:w-full">
+                        <img className="  rounded-t-lg"
+                             src={item.img} alt='' />
+                      </div>
+                      <div className="py-3 xl:py-5  px-7 ">
+                      <div  className=" text-white h-12 overflow-ellipsis overflow-hidden ">
+                        {item.title}
+                      </div>
+                        <div className="text-gray-400 pt-2 h-20 overflow-ellipsis overflow-hidden">
+                          {item.h1}
+                         </div>
+                        <div className="pt-5  text-gray-400">
+                          {item.time}
+                        </div>
+                      </div>
+                    </a> ))}
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
         <Tail></Tail>
         </div>

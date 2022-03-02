@@ -1,14 +1,16 @@
-import { Dialog, Disclosure, Listbox, Popover, Tab, Transition } from '@headlessui/react';
+import { Popover, Tab, Transition } from '@headlessui/react';
 import Link from "next/link";
-import { Switch } from '@headlessui/react'
 import {MenuIcon, XIcon} from "@heroicons/react/outline";
 import React, {Fragment, useEffect, useState} from "react";
-import {CheckIcon, ChevronDownIcon} from "@heroicons/react/solid";
+import { loginstate,wallet,loginopen,openaccount } from '../jotai';
+import { useAtom } from 'jotai';
+import Login from '../login/inde';
+import Account from '../account';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 const navigation = [
-  { id:1 ,name: 'Explore', href: '/home' },
+  { id:1 ,name: 'Explore', href: '/explore' },
   { id:2 ,name: 'Spaces', href: '/' },
   { id:3 ,name: 'Credentials', href: '/' },
   { id:4 ,name: 'My NFTs', href: '/' },
@@ -19,26 +21,36 @@ const navigation = [
 ]
 
 
+
 const Header=()=>{
 
-
-  const [opentrue, setOpentrue] = useState(false)
-
-
+  //打开登陆界面
+  const [opentrue, setOpentrue] = useAtom(loginopen)
+  //展示地址
+  const [loginState,setLoginstate]=useAtom(loginstate)
+  //是否登陆钱包
+  const [Wallet,setWallet]=useAtom(wallet)
+  //打开基本信息
+  const [openAccount,setOpenaccount]=useAtom(openaccount)
   const login =() => {
     setOpentrue(true)
 
   }
+  function account(){
+    setOpenaccount(true)
+  }
+
 
 
   return(
     <header>
+      <Login></Login>
       <Popover className="relative bg-white  ">
         <div className="flex  fixed z-20 inset-x-0 bg-black    transition duration-700 mb-10 pl-5  justify-between items-center  p-3 sm:px-6 lg:justify-end md:space-x-10 lg:px-10  ">
 
           <div className=" flex w-full justify-between lg:justify-start">
             <div className="flex justify-start  ">
-              <Link  href="/">
+              <Link  href="/home">
                 <a>
                   <span className="sr-only">Workflow</span>
                   <img
@@ -90,15 +102,28 @@ const Header=()=>{
           </div>
 
 
-          <div className="hidden lg:flex w-full justify-end md:flex-1 ">
-            <div>
-              <button onClick={login} className="bg-blue-600 transition duration-700  w-36 px-4 py-2 text-white rounded-lg mr-10 flex justify-center">
+          <div className="hidden lg:flex w-full  md:flex-1 ">
+            <div className={Wallet?"hidden":""}>
+              <button   onClick={login} className="bg-blue-600 transition duration-700  w-36 px-4 py-2 text-white rounded-lg  flex justify-center">
                 Connect Wallet
               </button>
             </div>
+            <div className={Wallet?"":"hidden"}>
+              <div className="flex bg-gray-800 rounded-full p-1 justify-center">
+                <div className="flex items-center mr-4 p-2">
+                  <img className="w-6 h-6 rounded-lg mx-1"
+                       src='https://portal.web3games.org/_next/image?url=%2Fnetworks%2Fethereum-network.jpg&w=48&q=75' alt='' />
 
+                  <div className=" text-white">
+                    Ethereum
+                  </div>
+                </div>
 
-
+              <button    onClick={account} className=" bg-gray-600 rounded-full truncate  w-40 px-4 py-2 text-white rounded-lg  flex  ">
+                {loginState}
+              </button>
+              </div>
+            </div>
 
 
           </div>
@@ -169,83 +194,10 @@ const Header=()=>{
             </Popover.Panel>
 
           </Transition>
-          <Transition.Root show={opentrue} as={Fragment}>
-            <Dialog as="div" className="fixed z-20 inset-0 overflow-y-auto " onClose={setOpentrue}>
-              <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                <Transition.Child
-                  as={Fragment}
-                  enter="ease-out duration-300"
-                  enterFrom="opacity-0"
-                  enterTo="opacity-100"
-                  leave="ease-in duration-200"
-                  leaveFrom="opacity-100"
-                  leaveTo="opacity-0"
-                >
-                  <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-                </Transition.Child>
 
-                {/* This element is to trick the browser into centering the modal contents. */}
-                <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;
-          </span>
-                <Transition.Child
-                  as={Fragment}
-                  enter="ease-out duration-300"
-                  enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                  enterTo="opacity-100 translate-y-0 sm:scale-100"
-                  leave="ease-in duration-200"
-                  leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-                  leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                >
-                  <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:y-8 sm:align-middle  sm:p-6 lg:p-12 ">
-                    <div>
-                      <div className='flex justify-between text-xl font-light	'>
-
-                        <div className=" font-bold mb-2 text-2xl">
-                          Connect your wallet
-                        </div>
-                        <button  onClick={() => setOpentrue(false)}
-                                 className="fa fa-times " aria-hidden="true"></button>
-                      </div>
-                      <div className="text-base text-gray-600 w-96 mr-8">
-                        Connect with one of available wallet providers or create a new wallet.</div>
-
-
-                      <button className="bg-black flex justify-between text-white p-4 rounded-lg w-full my-8">
-                        <div className="text-lg font-semibold">
-                          MetaMask
-                        </div>
-                        <div>
-                          <img className="w-8 h-8" src="https://portal.web3games.org/icon-wallet-metamask.svg" alt=""/>
-                        </div>
-                      </button>
-
-                      <button className="bg-black flex justify-between text-white p-4 rounded-lg w-full my-8">
-                        <div className="text-lg font-semibold">
-                          WalletConnect
-                        </div>
-                        <div>
-                          <img className="w-8 h-8" src="https://portal.web3games.org/icon-wallet-walletconnect.svg" alt=""/>
-                        </div>
-                      </button>
-                      <button className="bg-black flex justify-between text-white p-4 rounded-lg w-full my-8">
-                        <div className="text-lg font-semibold">
-                          Polkadotjs
-                        </div>
-                        <div>
-                          <img className="w-8 h-8 rounded-lg" src="https://cdn.discordapp.com/attachments/876498266550853642/908665467273613392/unknown.png" alt=""/>
-                        </div>
-                      </button>
-                      <div className="text-sm text-gray-500 w-96 ">
-                        We do not own your private keys and cannot access your funds without your confirmation.
-                      </div>
-                    </div>
-                  </div>
-                </Transition.Child>
-              </div>
-            </Dialog>
-          </Transition.Root>
         </div>
       </Popover>
+      <Account></Account>
     </header>
   )
 }

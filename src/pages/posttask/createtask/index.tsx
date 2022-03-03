@@ -2,6 +2,8 @@ import React from "react"
 import Header from "../../../components/header"
 import Tail from "../../../components/tail"
 import Login from '../../../components/login/inde';
+import { Linking } from 'react-native';
+import Link from "next/link";
 
 const tasks=[
   {
@@ -34,15 +36,18 @@ const CreateTask = () =>{
                   <div className="md:flex  text-xl ">
                     <div>
                       Task Logo
-                      <a href=''>
+                      <Link href=''>
+                      <a>
                       <div className="mt-3 md:p-5 w-28 h-28 text-center text-4xl rounded-2xl border-dashed border border-gray-500 hover:border-white transition duration-300">
                         <i className="fa fa-picture-o mt-8 md:mt-4" aria-hidden="true"></i>
                       </div>
                       </a>
+                      </Link>
                     </div>
                    <div className="mt-5 md:mt-0 md:ml-16 ">
                      Cover Image
-                     <a href="">
+                     <Link  href="">
+                     <a>
                        <div className="mt-3 md:p-5  h-28 flex rounded-2xl border-dashed border border-gray-500 hover:border-white transition duration-300">
                          <div className=" text-4xl mr-5">
                          <i className="fa fa-picture-o mt-8 ml-3 md:mt-4 md:ml-4" aria-hidden="true"></i>
@@ -54,8 +59,8 @@ const CreateTask = () =>{
                            </div>
                          </div>
                        </div>
-
                      </a>
+                     </Link>
 
                    </div>
                   </div>
@@ -96,13 +101,15 @@ const CreateTask = () =>{
                     </div>
                   </div>
 
-                  <a href='' className="mt-3 flex justify-end">
+                  <Link href=''>
+                  <a  className="mt-3 flex justify-end">
                     <button className="px-5 py-2 text-black mt-5  bg-gradient-to-r from-blue-300  to-red-300 rounded-2xl">
                       <div className="">
                         Task List
                       </div>
                     </button>
                   </a>
+                  </Link>
                 </div>
             </div>
           </div>

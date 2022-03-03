@@ -10,14 +10,13 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 const navigation = [
-  { id:1 ,name: 'Explore', href: '/explore' },
+  { id:1 ,name: 'Explore', href: '/claim' },
   { id:2 ,name: 'Task', href: '/task' },
-  { id:3 ,name: 'PostTask', href: '/posttask' },
+  { id:3 ,name: 'Submit', href: '/submit' },
   { id:4 ,name: 'Spaces', href: '/spaces' },
-  { id:5 ,name: 'Galaxy', href: '/galaxy' },
-  { id:6 ,name: 'Blog', href: '/' },
-  { id:7 ,name: 'Docs', href: '/' },
-
+  { id:5 ,name: 'Square', href: '/square' },
+  // { id:6 ,name: 'Blog', href: '/' },
+  // { id:7 ,name: 'Docs', href: '/' },
 ]
 
 

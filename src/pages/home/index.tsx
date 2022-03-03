@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link";
 import Header from "../../components/header"
 import Tail from "../../components/tail"
 import Login from '../../components/login/inde';
@@ -36,8 +37,33 @@ const spaces=[
   },
   {
     a:"",
-    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/galaxyspace/galaxyspace-logo-1640145282.png",
-    title:"Galaxy Space",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/logo/alpaca-icon.png",
+    title:"Alpaca Finance",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/1642609357/1642609357-logo-1642609356.png",
+    title:"CoinGecko",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/logo/perp-logo.png",
+    title:"Perpetual Protocol",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/logo/multicoin-logo.jpg",
+    title:"Multicoin Capital",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/logo/injective-logo.png",
+    title:"Injective",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/1634534074/1634534074-logo-1634534073.jpeg",
+    title:"The Defiant",
   },
 ]
 const news=[
@@ -108,32 +134,35 @@ const Home = () =>{
                   </h1>
                   <div className="flex text-white text-xl">
                     <div className="  mr-10 rounded-tl-md  rounded-bl-3xl rounded-br-md  rounded-tr-3xl  bg-gradient-to-r bg-blue-800">
-                    <button className=" px-7 py-3.5  rounded-tl-md  rounded-bl-3xl rounded-br-md  rounded-tr-3xl  bg-gradient-to-r from-blue-400 to-blue-600 transform transition duration-300  -translate-x-1 -translate-y-0.5 hover:-translate-x-0.5 hover:-translate-y-0">
-                      EXPLORE
-
-                    </button>
+                    <div className=" px-7 py-3.5  rounded-tl-md  rounded-bl-3xl rounded-br-md  rounded-tr-3xl  bg-gradient-to-r from-blue-400 to-blue-600 transform transition duration-300  -translate-x-1 -translate-y-0.5 hover:-translate-x-0.5 hover:-translate-y-0">
+                      <Link href='/explore'>
+                        EXPLORE
+                      </Link>
+                    </div>
                     </div>
                     <div className="rounded-tl-md  rounded-bl-3xl rounded-br-md  rounded-tr-3xl border-2 border-indigo-600">
-                    <button className="px-7 py-3 rounded-tl-md  rounded-bl-3xl rounded-br-md  rounded-tr-3xl bg-indigo-800 border-2 border-blue-500 transform transition duration-300  -translate-x-1 -translate-y-1 hover:-translate-x-0 hover:-translate-y-0">
-                     CREATE
-                    </button>
+                    <div className="px-7 py-3 rounded-tl-md  rounded-bl-3xl rounded-br-md  rounded-tr-3xl bg-indigo-800 border-2 border-blue-500 transform transition duration-300  -translate-x-1 -translate-y-1 hover:-translate-x-0 hover:-translate-y-0">
+                      <Link href='/claim'>
+                        CLAIM
+                      </Link>
+                    </div>
                     </div>
 
                   </div>
 
                   <div className="md:flex mt-24">
-                    <a href='' className="flex  rounded-full bg-blue-600 bg-opacity-60 px-4 py-1  transform transition duration-300 hover:-translate-x-1 hover:bg-opacity-80 " >
+                    <div  className="flex  rounded-full bg-blue-600 bg-opacity-60 px-4 py-1  transform transition duration-300 hover:-translate-x-1 hover:bg-opacity-80 " >
                     <div className="text-white font-semibold mr-3">
                       News:
                     </div>
-                    <div className="text-gray-400 text-sm mt-0.5 truncate">
-                      Project Galaxy Presents: 2022 is gonna be SOL Cool
-                    </div>
+                    <a href="https://dfinity.org" className="text-gray-400 text-sm mt-0.5 truncate">
+                      Project PlayerLink Presents: 2022 is gonna be ICP Cool
+                    </a>
                     <div>
                       <i className="fa fa-arrow-right text-gray-200 ml-3" aria-hidden="true"></i>
                     </div>
-                    </a>
-                    <div className="mt-5 md:mt-1 md:ml-5  text-white">
+                    </div>
+                    <div className="mt-5 md:mt-0.5 md:ml-8  text-white">
                       <a href="" className="px-2.5 py-2 rounded-full bg-blue-600 bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
                       <i className="fa fa-twitter mt-1.5 " aria-hidden="true"></i>
                       </a>
@@ -158,9 +187,11 @@ const Home = () =>{
                <div className="text-white text-3xl">
                  SPACES
                </div>
-                <a href="" className="text-blue-400 text-xl mt-2">
-                  View All
-                </a>
+                <div className="text-blue-400 text-xl mt-2">
+                  <Link href="/spaces" >
+                    View All
+                  </Link>
+                </div>
               </div>
 
               <div className="mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
@@ -182,7 +213,7 @@ const Home = () =>{
               <div className="mt-32">
                 <div className="flex justify-between">
                   <div className="text-white text-3xl">
-                    GALAXY NEWS
+                    PlayerLink News
                   </div>
                   <a href="" className="text-blue-400 text-xl mt-2">
                     View All

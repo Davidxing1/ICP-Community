@@ -3,6 +3,7 @@ import Header from "../../components/header"
 import Tail from "../../components/tail"
 import Login from '../../components/login/inde';
 
+
 const spaces=[
   {
     a:"",
@@ -36,8 +37,33 @@ const spaces=[
   },
   {
     a:"",
-    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/galaxyspace/galaxyspace-logo-1640145282.png",
-    title:"Galaxy Space",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/logo/alpaca-icon.png",
+    title:"Alpaca Finance",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/1642609357/1642609357-logo-1642609356.png",
+    title:"CoinGecko",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/logo/perp-logo.png",
+    title:"Perpetual Protocol",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/logo/multicoin-logo.jpg",
+    title:"Multicoin Capital",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/logo/injective-logo.png",
+    title:"Injective",
+  },
+  {
+    a:"",
+    img:"https://d257b89266utxb.cloudfront.net/galaxy/images/1634534074/1634534074-logo-1634534073.jpeg",
+    title:"The Defiant",
   },
 ]
 

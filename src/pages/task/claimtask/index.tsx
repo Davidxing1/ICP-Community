@@ -23,7 +23,7 @@ const SubmitTask = () =>{
         <div className="bg-black bg-opacity-90 mx-auto">
           <div className="max-w-7xl relative px-5 pb-16 pt-16 sm:px-6 sm:pb-24 lg:pb-32 mx-auto ">
             <div className="text-white text-5xl">
-              Create Task
+              Claim Task
             </div>
 
             <div className="mt-16 ">
@@ -38,7 +38,7 @@ const SubmitTask = () =>{
                       <Link href=''>
                       <a href=''>
                       <div className="mt-3 md:p-5 w-28 h-28 text-center text-4xl rounded-2xl border-dashed border border-gray-500 hover:border-white transition duration-300">
-                        <i className="fa fa-picture-o mt-8 md:mt-4" aria-hidden="true"></i>
+                          {/*  show image*/}
                       </div>
                       </a>
                       </Link>
@@ -48,15 +48,7 @@ const SubmitTask = () =>{
                      <Link href="">
                      <a>
                        <div className="mt-3 md:p-5  h-28 flex rounded-2xl border-dashed border border-gray-500 hover:border-white transition duration-300">
-                         <div className=" text-4xl mr-5">
-                         <i className="fa fa-picture-o mt-8 ml-3 md:mt-4 md:ml-4" aria-hidden="true"></i>
-                         </div>
-                         <div className="text-base mt-3 md:mt-0 xl:mt-3">
-                         Drop files here to upload
-                           <div className="text-gray-400 text-sm md:text-base">
-                             Recommended size is 1600 x 400 pixels and less than 10 MB.
-                           </div>
-                         </div>
+                       {/*  image*/}
                        </div>
 
                      </a>
@@ -64,48 +56,60 @@ const SubmitTask = () =>{
 
                    </div>
                   </div>
-                  <div className="text-xl mt-10">
-                    Task Name
+                  <div className="text-xl mt-10  md:flex">
+                    <div>
+                    Task URL
                     <div className="mt-3 flex">
                     <input type="text"
                            className="bg-gray-700 bg-opacity-30 text-xs md:text-sm   rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"
-                           placeholder="Enter a Task Name"
+                           placeholder="Enter a Github Task URL"
                            id="Name"
                     />
+
                     </div>
-                  </div>
-                  <div className="text-xl mt-10">
-                    Task Domain
-                    <div className="text-gray-600 text-base">
-                      Allow 9-20 letters temporarily
+
                     </div>
-                    <div className="mt-3 flex">
-                      <input type="text"
-                             className="bg-gray-700 bg-opacity-30 text-xs md:text-sm   rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"
-                             placeholder="Enter a Task Domain"
-                             id="Domain"
-                      />
-                      <div className="mt-3 ml-1 text-gray-200">
-                        .playerlink
+                    <div className="md:mt-5">
+                    <button className="px-2 h-8 md:h-11  md:ml-5  text-sm  text-black mt-5 bg-gray-400  rounded-xl md:rounded-2xl">
+                      <div className="">
+                        Check URL
                       </div>
+                    </button>
                     </div>
+
                   </div>
-                  <div className="text-xl mt-10">
-                    Task Introduction
-                    <div className="mt-3 flex ">
-                      <textarea
-                             className="bg-gray-700 bg-opacity-30 text-xs md:text-sm break-normal h-32 rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"
-                             placeholder="Enter Task Introduction"
-                             id="Introduction"
-                      />
-                    </div>
-                  </div>
+                  {/*<div className="text-xl mt-10">*/}
+                  {/*  Task Domain*/}
+                  {/*  <div className="text-gray-600 text-base">*/}
+                  {/*    Allow 9-20 letters temporarily*/}
+                  {/*  </div>*/}
+                  {/*  <div className="mt-3 flex">*/}
+                  {/*    <input type="text"*/}
+                  {/*           className="bg-gray-700 bg-opacity-30 text-xs md:text-sm   rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"*/}
+                  {/*           placeholder="Enter a Task Domain"*/}
+                  {/*           id="Domain"*/}
+                  {/*    />*/}
+                  {/*    <div className="mt-3 ml-1 text-gray-200">*/}
+                  {/*      .playerlink*/}
+                  {/*    </div>*/}
+                  {/*  </div>*/}
+                  {/*</div>*/}
+                  {/*<div className="text-xl mt-10">*/}
+                  {/*  Task Introduction*/}
+                  {/*  <div className="mt-3 flex ">*/}
+                  {/*    <textarea*/}
+                  {/*           className="bg-gray-700 bg-opacity-30 text-xs md:text-sm break-normal h-32 rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"*/}
+                  {/*           placeholder="Enter Task Introduction"*/}
+                  {/*           id="Introduction"*/}
+                  {/*    />*/}
+                  {/*  </div>*/}
+                  {/*</div>*/}
 
                   <Link href=''>
                   <a  className="mt-3 flex justify-end">
                     <button className="px-5 py-2 text-black mt-5  bg-gradient-to-r from-blue-300  to-red-300 rounded-2xl">
                       <div className="">
-                        Task List
+                          Submit Claim
                       </div>
                     </button>
                   </a>

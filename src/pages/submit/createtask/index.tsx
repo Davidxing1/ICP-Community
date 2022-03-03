@@ -64,48 +64,60 @@ const CreateTask = () =>{
 
                    </div>
                   </div>
-                  <div className="text-xl mt-10">
-                    Task Name
-                    <div className="mt-3 flex">
-                    <input type="text"
-                           className="bg-gray-700 bg-opacity-30 text-xs md:text-sm   rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"
-                           placeholder="Enter a Task Name"
-                           id="Name"
-                    />
-                    </div>
-                  </div>
-                  <div className="text-xl mt-10">
-                    Task Domain
-                    <div className="text-gray-600 text-base">
-                      Allow 9-20 letters temporarily
-                    </div>
-                    <div className="mt-3 flex">
-                      <input type="text"
-                             className="bg-gray-700 bg-opacity-30 text-xs md:text-sm   rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"
-                             placeholder="Enter a Task Domain"
-                             id="Domain"
-                      />
-                      <div className="mt-3 ml-1 text-gray-200">
-                        .playerlink
+                  <div className="text-xl mt-10  md:flex">
+                    <div>
+                      Task URL
+                      <div className="mt-3 flex">
+                        <input type="text"
+                               className="bg-gray-700 bg-opacity-30 text-xs md:text-sm   rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"
+                               placeholder="Enter a Github Task URL"
+                               id="Name"
+                        />
+
                       </div>
+
                     </div>
-                  </div>
-                  <div className="text-xl mt-10">
-                    Task Introduction
-                    <div className="mt-3 flex ">
-                      <textarea
-                             className="bg-gray-700 bg-opacity-30 text-xs md:text-sm break-normal h-32 rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"
-                             placeholder="Enter Task Introduction"
-                             id="Introduction"
-                      />
+                    <div className="md:mt-5">
+                      <button className="px-2 h-8 md:h-11  md:ml-5  text-sm  text-black mt-5 bg-gray-400  rounded-xl md:rounded-2xl">
+                        <div className="">
+                          Check URL
+                        </div>
+                      </button>
                     </div>
+
                   </div>
+                  {/*<div className="text-xl mt-10">*/}
+                  {/*  Task Domain*/}
+                  {/*  <div className="text-gray-600 text-base">*/}
+                  {/*    Allow 9-20 letters temporarily*/}
+                  {/*  </div>*/}
+                  {/*  <div className="mt-3 flex">*/}
+                  {/*    <input type="text"*/}
+                  {/*           className="bg-gray-700 bg-opacity-30 text-xs md:text-sm   rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"*/}
+                  {/*           placeholder="Enter a Task Domain"*/}
+                  {/*           id="Domain"*/}
+                  {/*    />*/}
+                  {/*    <div className="mt-3 ml-1 text-gray-200">*/}
+                  {/*      .playerlink*/}
+                  {/*    </div>*/}
+                  {/*  </div>*/}
+                  {/*</div>*/}
+                  {/*<div className="text-xl mt-10">*/}
+                  {/*  Task Introduction*/}
+                  {/*  <div className="mt-3 flex ">*/}
+                  {/*    <textarea*/}
+                  {/*           className="bg-gray-700 bg-opacity-30 text-xs md:text-sm break-normal h-32 rounded-2xl p-3  border-black w-96 border hover:border-white focus:border-white transition duration-300  outline-none"*/}
+                  {/*           placeholder="Enter Task Introduction"*/}
+                  {/*           id="Introduction"*/}
+                  {/*    />*/}
+                  {/*  </div>*/}
+                  {/*</div>*/}
 
                   <Link href=''>
                   <a  className="mt-3 flex justify-end">
                     <button className="px-5 py-2 text-black mt-5  bg-gradient-to-r from-blue-300  to-red-300 rounded-2xl">
                       <div className="">
-                        Task List
+                        Summit Create
                       </div>
                     </button>
                   </a>

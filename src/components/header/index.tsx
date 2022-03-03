@@ -11,10 +11,10 @@ function classNames(...classes) {
 }
 const navigation = [
   { id:1 ,name: 'Explore', href: '/explore' },
-  { id:2 ,name: 'Spaces', href: '/' },
-  { id:3 ,name: 'Credentials', href: '/' },
-  { id:4 ,name: 'My NFTs', href: '/' },
-  { id:5 ,name: 'Galaxy ID', href: '/' },
+  { id:2 ,name: 'Task', href: '/task' },
+  { id:3 ,name: 'PostTask', href: '/posttask' },
+  { id:4 ,name: 'Spaces', href: '/spaces' },
+  { id:5 ,name: 'Galaxy', href: '/galaxy' },
   { id:6 ,name: 'Blog', href: '/' },
   { id:7 ,name: 'Docs', href: '/' },
 
@@ -23,6 +23,7 @@ const navigation = [
 
 
 const Header=()=>{
+
 
   //打开登陆界面
   const [opentrue, setOpentrue] = useAtom(loginopen)

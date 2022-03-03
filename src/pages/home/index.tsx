@@ -133,14 +133,14 @@ const Home = () =>{
                       <i className="fa fa-arrow-right text-gray-200 ml-3" aria-hidden="true"></i>
                     </div>
                     </a>
-                    <div className="mt-5 md:mt-0 md:ml-5 flex text-white">
-                      <a href="" className="px-2.5 py-1 rounded-full bg-blue-600 bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
+                    <div className="mt-5 md:mt-1 md:ml-5  text-white">
+                      <a href="" className="px-2.5 py-2 rounded-full bg-blue-600 bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
                       <i className="fa fa-twitter mt-1.5 " aria-hidden="true"></i>
                       </a>
-                      <a href="" className="px-2.5 py-1 rounded-full bg-blue-600 bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
+                      <a href="" className="px-2.5 py-2 rounded-full bg-blue-600 bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
                         <i className="fa fa fa-medium mt-1.5 " aria-hidden="true"></i>
                       </a>
-                      <a href="" className="px-2.5 py-1 rounded-full bg-blue-600 bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
+                      <a href="" className="px-2.5 py-2 rounded-full bg-blue-600 bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
                         <i className="fa fa-telegram mt-1.5 " aria-hidden="true"></i>
                       </a>
 

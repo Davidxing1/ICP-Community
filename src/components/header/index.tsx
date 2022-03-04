@@ -4,7 +4,7 @@ import {MenuIcon, XIcon} from "@heroicons/react/outline";
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { loginstate,wallet,loginopen,openaccount } from '../jotai';
 import { useAtom } from 'jotai';
-import Login from '../login/inde';
+import Login from '../login';
 import Account from '../account';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')

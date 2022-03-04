@@ -3,7 +3,7 @@ import Header from "../../components/header"
 import Tail from "../../components/tail"
 import { useAtom } from 'jotai';
 import { loginstate, wallet,loginopen  } from '../../components/jotai';
-import Login from '../../components/login/inde';
+import Login from '../../components/login';
 
 
 const Claim = () =>{

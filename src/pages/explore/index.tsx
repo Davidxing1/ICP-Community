@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react"
 import Header from "../../components/header"
 import Tail from "../../components/tail"
-import Login from '../../components/login/inde';
+import Login from '../../components/login';
 import Link from "next/link";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/outline";

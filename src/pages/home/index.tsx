@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link";
 import Header from "../../components/header"
 import Tail from "../../components/tail"
-import Login from '../../components/login/inde';
+import Login from '../../components/login';
 
 const spaces=[
   {

@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "../../../components/header"
 import Tail from "../../../components/tail"
-import Login from '../../../components/login/inde';
+import Login from '../../../components/login';
 import Link from "next/link";
 
 const tasks=[

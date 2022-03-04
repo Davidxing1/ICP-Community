@@ -1,29 +1,29 @@
 import React from "react"
 import Header from "../../components/header"
 import Tail from "../../components/tail"
-import Login from '../../components/login/inde';
+import Login from '../../components/login';
 
 
 const team=[
   {
     img:"https://web3games.org/_next/image?url=%2Fteam%2Fhenry.png&w=3840&q=75",
     name:"Henry",
-    position:"Blockchain Lead"
+    position:"Core Contributor"
   },
   {
     img:"https://web3games.org/_next/image?url=%2Fteam%2Fjoan.png&w=3840&q=75",
     name:"Joan",
-    position:"Operation"
+    position:"Core Contributor"
   },
   {
     img:"https://web3games.org/_next/image?url=%2Fteam%2Fchristy.png&w=3840&q=75",
     name:"David",
-    position:"Engineer"
+    position:"Core Contributor"
   },
   {
     img:"https://web3games.org/_next/image?url=%2Fteam%2Fgary.png&w=3840&q=75",
     name:"Able",
-    position:"UI Designer"
+    position:"Core Contributor"
   },
 
 
@@ -70,6 +70,23 @@ const Mediatext=[
     img:"https://web3games.org/_next/image?url=%2Fmedia%2Fcoinmarketcap.png&w=1920&q=75",
     h1:'CoinMarketCap',
     h2:"Alibaba's SCMP follows TIME Magazine, Launches ARTIFACTs NFTs to Tokenize Media Assets",
+  },
+]
+
+const awards=[
+  {
+    id:"1",
+    href:"#",
+    img:"https://web3games.org/_next/image?url=%2Fteam-awards%2Fpolkadot.png&w=1080&q=75",
+    h1:'Developers Choice Award',
+    h2:"1st Official Polkadot Hackathon",
+  },
+  {
+    id:"2",
+    href:"#",
+    img:"https://web3games.org/_next/image?url=%2Fteam-awards%2Fhellolayer2.png&w=1080&q=75",
+    h1:'Commercial Excellence Award',
+    h2:"Hello Layer 2! Let's roll up! Ethereum Hackathon ",
   },
 ]
 
@@ -126,6 +143,30 @@ const Team = () =>{
             </div>
         </div>
           </div>
+
+          <div className="bg-black bg-opacity-30 mx-auto">
+            <div className="max-w-7xl  relative px-5 pb-16 pt-24 sm:px-6 sm:pb-24 lg:pb-32 mx-auto ">
+              <div>
+                <h2 className="text-white text-2xl md:text-4xl font-medium text-center">
+                  Team Awards
+                </h2>
+              </div>
+              <div className="mt-5 md:flex grid md:grid-cols-2 justify-between  mx-auto ">
+                {awards.map((item)=>(
+                  <a key={item.id} className="transform hover:scale-105 duration-300" href={item.href}>
+                    <div  className="md:mx-10 my-4  md:w-10/12">
+                      <img className="rounded-t-lg  bg-black "
+                           src={item.img} alt=""/>
+                      <div className="p-10 bg-black bg-opacity-70 h-44 rounded-b-lg">
+                        <h1 className="text-white text-xl font-semibold mb-2">{item.h1}</h1>
+                        <h2 className="text-gray-400 ">{item.h2}</h2>
+                      </div>
+                    </div></a>
+                ))}
+              </div>
+            </div>
+          </div>
+
           </div>
       </div>
       <Tail></Tail>

@@ -15,6 +15,7 @@ const navigation = [
   { id:3 ,name: 'Submit', href: '/submit' },
   { id:4 ,name: 'Spaces', href: '/spaces' },
   { id:5 ,name: 'Square', href: '/square' },
+  { id:6 ,name: 'Mirror', href: 'https://mirror.xyz/0x72190f3Ad0fdfc11c674435b12b0752949d76597/zvNbExNS6fwPT7kzkgu6EHrd9gSzcCeoXGms8kZd_DA' },
   // { id:6 ,name: 'Blog', href: '/' },
   // { id:7 ,name: 'Docs', href: '/' },
 ]

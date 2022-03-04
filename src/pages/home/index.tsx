@@ -125,7 +125,7 @@ const Home = () =>{
                 <div>
                   <h1 className=" md:max-w-xs xl:max-w-xl mb-16">
                     <span className="block text-white text-4xl  tracking-tight sm:text-5xl pb-6">THRIVE WITH</span>
-                    <span className="block text-white text-4xl  tracking-tight sm:text-5xl pb-6">DIGITAL CREDENTIALS</span>
+                    <span className="block text-white text-4xl  tracking-tight sm:text-5xl pb-6">BEST PLAYERLINK</span>
                     <span className="block text-white text-4xl  tracking-tight sm:text-5xl pb-12 flex" >
                       IN
                       <div className="ml-2 text-blue-400">

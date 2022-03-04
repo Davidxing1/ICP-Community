@@ -1,23 +1,21 @@
 import Link from "next/link"
 import React from "react"
 
-
-
 const ends =[
     {
         title:"Explore",
         content:[
             {
                 h1:"Home",
-                href:"https://web3games.org/",
+                href:"/",
             },
             {
                 h1:"Team",
-                href:"https://web3games.org/team",
+                href:"/team",
             },
             {
                 h1:"Token",
-                href:"https://web3games.org/token",
+                href:"",
             }
         ]
 
@@ -27,15 +25,15 @@ const ends =[
         content:[
             {
                 h1:"Docs",
-                href:"https://docs.web3games.org/",
+                href:"",
             },
             {
-                h1:"Medium",
-                href:"https://medium.com/web3games",
+                h1:"Mirror",
+                href:"https://mirror.xyz/0x72190f3Ad0fdfc11c674435b12b0752949d76597/zvNbExNS6fwPT7kzkgu6EHrd9gSzcCeoXGms8kZd_DA",
             },
             {
                 h1:"GitHub",
-                href:"https://github.com/web3gamesofficial",
+                href:"",
             }
         ]
 
@@ -45,15 +43,15 @@ const ends =[
         content:[
             {
                 h1:"Discord",
-                href:"https://discord.com/invite/web3games",
+                href:"https://discord.gg/Hypkryxwsb",
             },
             {
                 h1:"Twitter",
-                href:"https://twitter.com/web3games",
+                href:"https://twitter.com/playerlink_io",
             },
             {
                 h1:"Telegram",
-                href:"https://t.me/web3gamesofficial",
+                href:"https://t.me/PlayerLink",
             }
         ]
 
@@ -61,19 +59,19 @@ const ends =[
 ]
 const participate=[
     {
-        href:"https://t.me/web3gamesofficial",
+        href:"https://t.me/PlayerLink",
         icon:"fa fa-telegram"
     },
     {
-        href:"https://twitter.com/web3games",
+        href:"https://twitter.com/playerlink_io",
         icon:"fa fa-twitter",
     },
     {
-        href:"https://discord.com/invite/web3games",
+        href:"https://discord.gg/Hypkryxwsb",
         icon:"fa fa-reddit",
     },
     {
-        href:"https://medium.com/web3games",
+        href:"https://mirror.xyz/0x72190f3Ad0fdfc11c674435b12b0752949d76597/zvNbExNS6fwPT7kzkgu6EHrd9gSzcCeoXGms8kZd_DA",
         icon:"fa fa-medium",
     }
 

@@ -16,6 +16,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
+    "@polkadot/api": "^7.10.1",
     "@reduxjs/toolkit": "^1.6.0",
     "jotai": "^1.6.0",
     "next": "latest",

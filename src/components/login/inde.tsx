@@ -2,7 +2,6 @@ import React, { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { useAtom } from 'jotai';
 import { loginstate, wallet,loginopen } from '../jotai';
-
 const Login=()=>{
   //打开登陆界面
   const [opentrue, setOpentrue] = useAtom(loginopen)
@@ -13,19 +12,34 @@ const Login=()=>{
 
   async function  loginMeatMask (){
     // @ts-ignore
-    const account = await ethereum.request({ method: 'eth_requestAccounts' });
+   const account = await ethereum.request({ method: 'eth_requestAccounts' });
    const first=account[0].slice(0,6)
     const last=account[0].slice(-5,-1)
     const data=first+"...."+last
     if(data){
       setWallet(true)
       setLoginstate(data)
-
     }
-
-
-
   }
+  let allAccounts
+  async function loginPolkadot() {
+    // // @ts-ignore
+    // const isWeb3Injected = (await import("@polkadot/extension-dapp")).isWeb3Injected;
+    // // @ts-ignore
+    // const web3Enable = (await import("@polkadot/extension-dapp")).web3Enable;
+    // const allInjected = await web3Enable('my cool dapp');
+    // // @ts-ignore
+    // const web3Accounts = (await import("@polkadot/extension-dapp")).web3Accounts;
+    // allAccounts = await web3Accounts();
+    // if (isWeb3Injected) {
+    //   setWallet(true)
+    //   setOpentrue(true)
+    //   setOpentrue(allAccounts)
+    //   console.log(allAccounts)
+    // }
+  }
+
+
   return(
     <Transition.Root show={opentrue} as={Fragment}>
       <Dialog as="div" className="fixed z-20 inset-0 overflow-y-auto " onClose={setOpentrue}>
@@ -85,7 +99,7 @@ const Login=()=>{
                     <img className="w-8 h-8" src="https://portal.web3games.org/icon-wallet-walletconnect.svg" alt=""/>
                   </div>
                 </button>
-                <button className="bg-black flex justify-between text-white p-4 rounded-lg w-full my-8">
+                <button onClick={loginPolkadot} className="bg-black flex justify-between text-white p-4 rounded-lg w-full my-8">
                   <div className="text-lg font-semibold">
                     Polkadotjs
                   </div>

@@ -1,0 +1,137 @@
+import React from "react"
+import Header from "../../components/header"
+import Tail from "../../components/tail"
+import Login from '../../components/login/inde';
+
+
+const team=[
+  {
+    img:"https://web3games.org/_next/image?url=%2Fteam%2Fhenry.png&w=3840&q=75",
+    name:"Henry",
+    position:"Blockchain Lead"
+  },
+  {
+    img:"https://web3games.org/_next/image?url=%2Fteam%2Fjoan.png&w=3840&q=75",
+    name:"Joan",
+    position:"Operation"
+  },
+  {
+    img:"https://web3games.org/_next/image?url=%2Fteam%2Fchristy.png&w=3840&q=75",
+    name:"David",
+    position:"Engineer"
+  },
+  {
+    img:"https://web3games.org/_next/image?url=%2Fteam%2Fgary.png&w=3840&q=75",
+    name:"Able",
+    position:"UI Designer"
+  },
+
+
+]
+const Mediatext=[
+  {
+    id:"1",
+    href:"#",
+    img:"https://web3games.org/_next/image?url=%2Fmedia%2Fcoindesk.png&w=1920&q=75",
+    h1:'CoinDesk',
+    h2:"NEAR Protocol is working with Web3Games and Chinese artist Heshan Huang to sell NFT-based “real estate.”",
+  },
+  {
+    id:"2",
+    href:"#",
+    img:"https://web3games.org/_next/image?url=%2Fmedia%2Fcointelegraph.png&w=2048&q=75",
+    h1:'Cointelegraph',
+    h2:"Chinese artist showcases NFT real estate at Alibaba-sponsored innovation festival",
+  },
+  {
+    id:"3",
+    href:"#",
+    img:"https://web3games.org/_next/image?url=%2Fmedia%2Fyahoo-finance.png&w=1920&q=75",
+    h1:'Yahoo! Finance',
+    h2:"Alibaba’s E-Commerce Website Taobao to Include NFT Arts in Its Market Festival",
+  },
+  {
+    id:"4",
+    href:"#",
+    img:"https://web3games.org/_next/image?url=%2Fmedia%2Fdecrypt.png&w=1920&q=75",
+    h1:'Decrypt',
+    h2:"Alibaba Brings NFT Real Estate to Chinese Entrepreneur Festival",
+  },
+  {
+    id:"5",
+    href:"#",
+    img:"https://web3games.org/_next/image?url=%2Fmedia%2Fnasdaq.png&w=1920&q=75",
+    h1:'Nasdaq',
+    h2:"NEAR Protocol is working with blockchain gaming firm Web3Games to sell non-fungible token",
+  },
+  {
+    id:"6",
+    href:"#",
+    img:"https://web3games.org/_next/image?url=%2Fmedia%2Fcoinmarketcap.png&w=1920&q=75",
+    h1:'CoinMarketCap',
+    h2:"Alibaba's SCMP follows TIME Magazine, Launches ARTIFACTs NFTs to Tokenize Media Assets",
+  },
+]
+
+const Team = () =>{
+
+  return (
+    <div className="mx-auto  dark:bg-current  transition duration-700">
+      <Header></Header>
+      <Login></Login>
+
+      <div className="relative pt-16">
+        <div className="absolute inset-x-0 bottom-0    " />
+        <div className="bg-black bg-opacity-90 mx-auto">
+          <div className="max-w-7xl relative px-5 pb-16 pt-24 sm:px-6 sm:pb-24 lg:pb-32 mx-auto ">
+            <div className="flex justify-start md:justify-center text-4xl text-white">
+              Community Team
+               </div>
+
+            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
+              {team.map(item=>(
+                <div key={item.name}  className="  rounded-lg p-5 transform ">
+                  <div className=" ">
+                    <img className="border-4 rounded-full mx-auto w-24 h-24"
+                         src={item.img} alt='' />
+                  </div>
+                  <div className="text-white text-center mt-2 font-semibold">
+                    {item.name}
+                  </div>
+                  <div className="text-indigo-400 text-center mt-2 font-semibold">
+                    {item.position}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="bg-black bg-opacity-30 mx-auto">
+          <div className="max-w-7xl  relative px-5 pb-16 pt-24 sm:px-6 sm:pb-24 lg:pb-32 mx-auto ">
+            <div>
+              <h1 className="text-blue-400  text-base md:text-lg mb-3">Media</h1>
+              <h2 className="text-white text-2xl md:text-4xl font-medium">PlayLink in  Media</h2>
+            </div>
+            <div className="mt-5 flex grid md:grid-cols-2 xl:grid-cols-3 ">
+              {Mediatext.map((item)=>(
+                <a key={item.id} className="transform hover:scale-105 duration-300" href={item.href}>
+                  <div  className="mx-2 my-4">
+                    <img className="rounded-lg   "
+                         src={item.img} alt=""/>
+                    <div className="mt-4">
+                      <h1 className="text-white text-lg font-semibold mb-2">{item.h1}</h1>
+                      <h2 className="text-gray-400">{item.h2}</h2>
+                    </div>
+                  </div></a>
+              ))}
+            </div>
+        </div>
+          </div>
+          </div>
+      </div>
+      <Tail></Tail>
+    </div>
+  )
+}
+
+export default Team
+

@@ -1,7 +1,7 @@
 import { Popover, Tab, Transition } from '@headlessui/react';
 import Link from "next/link";
 import {MenuIcon, XIcon} from "@heroicons/react/outline";
-import React, {Fragment, useEffect, useState} from "react";
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { loginstate,wallet,loginopen,openaccount } from '../jotai';
 import { useAtom } from 'jotai';
 import Login from '../login/inde';
@@ -10,20 +10,25 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 const navigation = [
-  { id:1 ,name: 'Explore', href: '/claim' },
+  { id:1 ,name: 'Explore', href: '/explore' },
   { id:2 ,name: 'Task', href: '/task' },
   { id:3 ,name: 'Submit', href: '/submit' },
   { id:4 ,name: 'Spaces', href: '/spaces' },
   { id:5 ,name: 'Square', href: '/square' },
-  { id:6 ,name: 'Mirror', href: 'https://mirror.xyz/0x72190f3Ad0fdfc11c674435b12b0752949d76597/zvNbExNS6fwPT7kzkgu6EHrd9gSzcCeoXGms8kZd_DA' },
-  // { id:6 ,name: 'Blog', href: '/' },
-  // { id:7 ,name: 'Docs', href: '/' },
+  { id:6 ,name: 'Team', href: '/team' },
 ]
 
 
 
 const Header=()=>{
+  let successful=useRef(null)
+  React.useEffect(()=>{
+   // @ts-ignore
+    if (successful == "Connect Wallet"){
+      setWallet(false)
+   }
 
+  },[])
 
   //打开登陆界面
   const [opentrue, setOpentrue] = useAtom(loginopen)
@@ -120,16 +125,12 @@ const Header=()=>{
                   </div>
                 </div>
 
-              <button    onClick={account} className=" bg-gray-600 rounded-full truncate  w-40 px-4 py-2 text-white rounded-lg  flex  ">
+              <button  ref={successful}  onClick={account} className=" bg-gray-600 rounded-full truncate  w-40 px-4 py-2 text-white rounded-lg  flex  ">
                 {loginState}
               </button>
               </div>
             </div>
-
-
           </div>
-
-
         </div>
 
         <div className="fixed z-20 inset-x-0">

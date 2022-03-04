@@ -6,7 +6,7 @@ import { loginstate, wallet,loginopen  } from '../../components/jotai';
 import Login from '../../components/login/inde';
 
 
-const Home = () =>{
+const Claim = () =>{
   const [Wallet,setWallet]=useAtom(wallet)
   const [opentrue, setOpentrue] = useAtom(loginopen)
   const login =() => {
@@ -45,7 +45,7 @@ const Home = () =>{
               <img className="  md:h-96 rounded-full" src='https://cdn.discordapp.com/attachments/876498266550853642/948879345190072320/llll.png' alt='' />
 
               <div className=" flex justify-center my-6 xl:my-10 ">
-                <img className="h-12 w-18" src="https://cdn.discordapp.com/attachments/876498219885031424/948965118320967680/logo.png" alt=""/>
+                <img className="h-8 w-18" src="https://cdn.discordapp.com/attachments/876498266550853642/949239933556645938/Pl.png" alt=""/>
               </div>
               <div className="hidden xl:inline-block   px-12 ">
                 <div  className={Wallet?"hidden":"flex justify-center mb-2  mx-auto"}>
@@ -108,4 +108,4 @@ const Home = () =>{
   )
 }
 
-export default Home
+export default Claim

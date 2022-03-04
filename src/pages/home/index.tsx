@@ -114,10 +114,10 @@ const Home = () =>{
               <div className="absolute inset-0">
                 <img
                   className="h-full w-full object-cover"
-                  src="https://cdn.discordapp.com/attachments/897398778166906911/900033418979594280/1.jpg"
+                  src="https://cdn.discordapp.com/attachments/876498266550853642/949201321112780810/beij_.png"
                   alt="People working on laptops"
                 />
-                <div className="absolute inset-0 bg-indigo-700 mix-blend-multiply" />
+
 
               </div>
 

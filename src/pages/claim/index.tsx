@@ -2,16 +2,13 @@ import React from "react"
 import Header from "../../components/header"
 import Tail from "../../components/tail"
 import { useAtom } from 'jotai';
-import { loginstate, wallet,loginopen  } from '../../components/jotai';
 import Login from '../../components/login';
+import {WalletButtonShowState, WalletListShowState} from "../../components/jotai";
 
 
 const Claim = () =>{
-  const [Wallet,setWallet]=useAtom(wallet)
-  const [opentrue, setOpentrue] = useAtom(loginopen)
-  const login =() => {
-    setOpentrue(true)
-  }
+  const [WalletButtonShow,] = useAtom(WalletButtonShowState)
+  const [,SetOpenWalletListState] = useAtom(WalletListShowState)
   return (
     <div className="mx-auto bg-gray-50 dark:bg-current   transition duration-700">
       <Header></Header>
@@ -26,12 +23,12 @@ const Claim = () =>{
             <a href='https://twitter.com/playerlink_io'>PlayerLink</a>
           </div>
         </div>
-        <div className={Wallet?"hidden":"flex justify-center mb-2  mx-auto"}>
+        <div className={WalletButtonShow?"hidden":"flex justify-center mb-2  mx-auto"}>
           <button  className="bg-blue-600  font-semibold  w-full   py-3 text-white rounded-lg  ">
             Connect Wallet
           </button>
         </div>
-        <div className={Wallet?"flex justify-center mb-2  mx-auto":"hidden"}>
+        <div className={WalletButtonShow?"flex justify-center mb-2  mx-auto":"hidden"}>
           <button  className="bg-blue-600  font-semibold  w-full   py-3 text-white rounded-lg  ">
             Claim
           </button>
@@ -48,12 +45,14 @@ const Claim = () =>{
                 <img className="h-8 w-18" src="https://cdn.discordapp.com/attachments/876498266550853642/949239933556645938/Pl.png" alt=""/>
               </div>
               <div className="hidden xl:inline-block   px-12 ">
-                <div  className={Wallet?"hidden":"flex justify-center mb-2  mx-auto"}>
-                  <button onClick={login} className="bg-blue-600 transition duration-700 font-semibold  w-full  px-4 py-3 text-white rounded-lg  flex justify-center">
+                <div  className={WalletButtonShow?"hidden":"flex justify-center mb-2  mx-auto"}>
+                  <button onClick={()=>{
+                    SetOpenWalletListState(true)
+                  }} className="bg-blue-600 transition duration-700 font-semibold  w-full  px-4 py-3 text-white rounded-lg  flex justify-center">
                     Connect Wallet
                   </button>
                 </div>
-                <div className={Wallet?"":"hidden"}>
+                <div className={WalletButtonShow?"":"hidden"}>
                   <button  className="bg-blue-600  font-semibold  w-full   py-3 text-white rounded-lg  ">
                     Claim
                   </button>

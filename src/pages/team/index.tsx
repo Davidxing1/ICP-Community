@@ -6,25 +6,35 @@ import Login from '../../components/login';
 
 const team=[
   {
-    img:"https://web3games.org/_next/image?url=%2Fteam%2Fhenry.png&w=3840&q=75",
+    img:"https://cdn.discordapp.com/attachments/897398778166906911/950273329422553128/unknown.png",
     name:"Henry",
     position:"Core Contributor"
   },
   {
-    img:"https://web3games.org/_next/image?url=%2Fteam%2Fjoan.png&w=3840&q=75",
+    img:"https://cdn.discordapp.com/attachments/897398778166906911/950273947147059230/unknown.png",
     name:"Joan",
     position:"Core Contributor"
   },
   {
-    img:"https://web3games.org/_next/image?url=%2Fteam%2Fchristy.png&w=3840&q=75",
+    img:"https://cdn.discordapp.com/attachments/897398778166906911/950274267470233620/unknown.png",
+    name:"Able",
+    position:"Core Contributor"
+  },
+  {
+    img:"https://cdn.discordapp.com/attachments/897398778166906911/950273846894813234/unknown.png",
     name:"David",
     position:"Core Contributor"
   },
   {
-    img:"https://web3games.org/_next/image?url=%2Fteam%2Fgary.png&w=3840&q=75",
-    name:"Able",
+    img:"https://cdn.discordapp.com/attachments/897398778166906911/950273679881814016/unknown.png",
+    name:"BoBo",
     position:"Core Contributor"
   },
+  {
+    img:"https://cdn.discordapp.com/attachments/897398778166906911/950273522666700830/unknown.png",
+    name:"FengFeng",
+    position:"Core Contributor"
+  }
 
 
 ]

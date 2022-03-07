@@ -141,7 +141,7 @@ const Task = () =>{
                   </div>
                 <div  className={claimedtasks.length?"mt-16 flex md:grid md:grid-cols-2 gap-4  xl:grid xl:grid-cols-3 gap-4 xl:gap-10 overflow-x-auto  md:overflow-visible":"hidden"}>
                   {claimedtasks.map(item=>(
-                    <a key={item.id} href={item.href} className="bg-gray-500 bg-opacity-20 text-white rounded-3xl  cursor-auto  p-10 px-10  transform transition duration-300  hover:scale-105   ">
+                    <a key={item.id} href="claimedtask" className="bg-gray-500 bg-opacity-20 text-white rounded-3xl  cursor-auto  p-10 px-10  transform transition duration-300  hover:scale-105   ">
                       <div className="flex  mb-5 justify-between">
                         <div className="flex">
                           <div>
@@ -206,7 +206,7 @@ const Task = () =>{
                 </div>
                 <div  className={completedtasks.length?"mt-16 flex md:grid md:grid-cols-2 gap-4   xl:grid xl:grid-cols-3 gap-4 xl:gap-10 overflow-x-auto md:overflow-visible":"hidden"}>
                   {completedtasks.map(item=>(
-                  <a key={item.id} href={item.href} className="bg-gray-500 bg-opacity-20  text-white rounded-3xl  cursor-auto  p-10 px-10  transform transition duration-300  hover:scale-105   ">
+                  <a key={item.id} href="completedtask" className="bg-gray-500 bg-opacity-20  text-white rounded-3xl  cursor-auto  p-10 px-10  transform transition duration-300  hover:scale-105   ">
                     <div className="flex  mb-5 justify-between">
                       <div className="flex">
                       <div>

@@ -156,7 +156,7 @@ const SpaceContent = () =>{
                         Square
                     </div>
                     <div className="text-blue-400 text-xl mt-2">
-                        <Link href="/spaces" >
+                        <Link href="/square" >
                             View All
                         </Link>
                     </div>

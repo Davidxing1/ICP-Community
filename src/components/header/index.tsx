@@ -25,6 +25,9 @@ const navigation = [
   { id:3 ,name: 'Submit', href: '/submit' },
   { id:4 ,name: 'Square', href: '/square' },
   { id:5 ,name: 'Team', href: '/team' },
+  { id:6 ,name: 'Faucet', href: '/faucet' },
+  { id:7 ,name: 'Token', href: '/token' },
+  { id:8 ,name: 'Airdrop', href: '/airdrop' },
 ]
 
 
@@ -70,11 +73,7 @@ const WalletList = () => {
                         alt=""
                     />
                   </a></Link>
-
               </div>
-
-
-
               <Tab.Group as="nav" className="hidden  lg:flex  space-x-10 py-3 pt-3 pl-10">
 
                 {navigation.map((item) => (
@@ -97,11 +96,6 @@ const WalletList = () => {
                       </Link>
                     </Tab.List>
                 ))}
-
-
-
-
-
               </Tab.Group>
             </div>
 
@@ -125,7 +119,7 @@ const WalletList = () => {
                     <img className="w-6 h-6 rounded-lg mx-1"
                          src='https://portal.web3games.org/_next/image?url=%2Fnetworks%2Fethereum-network.jpg&w=48&q=75' alt='' />
 
-                    <div className=" text-white">
+                    <div className=" text-white w-16">
                       Ethereum
                     </div>
                   </div>

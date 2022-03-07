@@ -1,16 +1,35 @@
 import { useAtom ,atom} from 'jotai'
 import { atomWithStorage } from 'jotai/utils'
 
-//更新钱包信息
-  const loginstate=atomWithStorage('address','Connect Wallet')
-//更新是否登陆钱包
-  const wallet=atom(true)
-//打开登陆界面
-  const loginopen=atom(false)
-//打开钱包信息界面
-  const openaccount=atom(false)
+//
+const WalletButtonShowState = atom(false)
+
+const WalletListShowState = atom(false)
+
+const AccountConfigPageState = atom(false)
 
 
-export {loginstate,wallet,loginopen,openaccount}
+//Account Choose
+const AccountChooseValue = atomWithStorage('AccountChoose',0)
+
+
+//EVM Account
+const EVMAddressValue = atomWithStorage('EvmAddress','')
+
+const AfterEvmAddressValue = atomWithStorage('AfterEvmAddress','')
+
+//-----Substrate Account
+
+const SubstrateAddressValue = atomWithStorage('SubstrateAddress','')
+
+const AfterSubstrateAddressValue = atomWithStorage('AfterSubstrateAddress','')
+
+//-----Substrate Account
+const NearAddressValue = atomWithStorage('NearAddress','')
+
+const AfterNearAddressValue = atomWithStorage('AfterNearAddress','')
+
+
+export {WalletButtonShowState,WalletListShowState,EVMAddressValue,AccountConfigPageState,AfterEvmAddressValue,AccountChooseValue,NearAddressValue,AfterNearAddressValue}
 
 

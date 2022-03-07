@@ -29,7 +29,7 @@ const completedtasks=[
 
   },
   {
-    id:"1",
+    id:"2",
     href:"",
     logo:"https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png",
     name:"PlayerLink",
@@ -40,7 +40,7 @@ const completedtasks=[
 
   },
   {
-    id:"1",
+    id:"3",
     href:"",
     logo:"https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png",
     name:"PlayerLink",
@@ -51,7 +51,7 @@ const completedtasks=[
 
   },
   {
-    id:"1",
+    id:"4",
     href:"",
     logo:"https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png",
     name:"PlayerLink",
@@ -61,7 +61,7 @@ const completedtasks=[
     h1:" Transforming a new generation of gameplay and digital content Transforming a new generation of gameplay and digital content",
 
   },{
-    id:"1",
+    id:"5",
     href:"",
     logo:"https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png",
     name:"PlayerLink",
@@ -72,7 +72,7 @@ const completedtasks=[
 
   },
   {
-    id:"1",
+    id:"6",
     href:"",
     logo:"https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png",
     name:"PlayerLink",
@@ -83,7 +83,7 @@ const completedtasks=[
 
   },
   {
-    id:"1",
+    id:"7",
     href:"",
     logo:"https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png",
     name:"PlayerLink",

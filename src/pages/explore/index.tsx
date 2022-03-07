@@ -17,6 +17,7 @@ const types = [
 
 const task=[
   {
+    id:"1",
     a:"",
     img:"https://d257b89266utxb.cloudfront.net/galaxy/images/rhizomedao/1646123036808267888.gif",
     title:"Alpaca Comics NFT 2",
@@ -24,6 +25,7 @@ const task=[
     name:"Alpace City",
   },
   {
+    id:"2",
     a:"",
     img:"https://d257b89266utxb.cloudfront.net/galaxy/images/web3games/1646218211355637524.gif",
     title:"Web3Games Community AMA 0304",
@@ -31,6 +33,7 @@ const task=[
     name:"Web3Games",
   },
   {
+    id:"3",
     a:"",
     img:"https://d257b89266utxb.cloudfront.net/galaxy/images/opendao/1646154387853663061.png",
     title:"Alpaca Comics NFT 2",
@@ -38,6 +41,7 @@ const task=[
     name:"OpenDao",
   },
   {
+    id:"4",
     a:"",
     img:"https://d257b89266utxb.cloudfront.net/galaxy/images/bitbtc/1646048276602415535.jpg",
     title:"“Who’s Satoshi Nakamoto” Whitelist Campaign1/2",
@@ -45,6 +49,7 @@ const task=[
     name:"BitBTC",
   },
   {
+    id:"5",
     a:"",
     img:"https://d257b89266utxb.cloudfront.net/galaxy/images/theweirdoghostgang/1645943727296353287.gif",
     title:"Secret Action-World Peace ",
@@ -139,7 +144,7 @@ const Explore = () =>{
 
             <div className="mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-5">
               {task.map(item=>(
-              <a href={item.a} key={item.a} className="bg-black    rounded-2xl  transform transition duration-300  hover:scale-105">
+              <a href={item.a} key={item.id} className="bg-black    rounded-2xl  transform transition duration-300  hover:scale-105">
                 <img className="rounded-t-2xl h-60 mx-auto" src={item.img} alt='' />
                 <div className="p-6">
                   <div className="text-white font-semibold text-lg mb-5 h-14 overflow-ellipsis overflow-hidden ">

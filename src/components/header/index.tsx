@@ -22,12 +22,13 @@ function classNames(...classes) {
 const navigation = [
   { id:1 ,name: 'Explore', href: '/explore' },
   { id:2 ,name: 'Task', href: '/task' },
-  { id:3 ,name: 'Submit', href: '/submit' },
-  { id:4 ,name: 'Square', href: '/square' },
-  { id:5 ,name: 'Team', href: '/team' },
-  { id:6 ,name: 'Faucet', href: '/faucet' },
+  // { id:3 ,name: 'Submit', href: '/submit' },
+  { id:3 ,name: 'Square', href: '/square' },
+  { id:4 ,name: 'Faucet', href: '/faucet' },
+  { id:5 ,name: 'Airdrop', href: '/airdrop' },
+  { id:6 ,name: 'Docs', href: '/airdrop' },
   { id:7 ,name: 'Token', href: '/token' },
-  { id:8 ,name: 'Airdrop', href: '/airdrop' },
+  { id:8 ,name: 'Team', href: '/team' },
 ]
 
 

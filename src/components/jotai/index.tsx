@@ -10,6 +10,9 @@ const AccountConfigPageState = atom(false)
 
 const AccountExchangeState = atom(false)
 
+const AccountDepositState = atom(false)
+
+
 //Account Choose
 const AccountChooseValue = atomWithStorage('AccountChoose',0)
 
@@ -33,6 +36,6 @@ const AfterNearAddressValue = atomWithStorage('AfterNearAddress','')
 
 export {WalletButtonShowState,WalletListShowState,EVMAddressValue,AccountConfigPageState,
   AfterEvmAddressValue,AccountChooseValue,NearAddressValue, AfterNearAddressValue,
-  AccountExchangeState}
+  AccountExchangeState,AccountDepositState}
 
 

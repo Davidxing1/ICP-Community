@@ -13,10 +13,9 @@ function classNames(...classes) {
 const types = [
   { id: 1, name: 'EVM' },
   { id: 2, name: 'Substrate' },
-  { id: 3, name: 'Polkadotjs' },
-  { id: 4, name: 'Plug' },
-  { id: 5, name: 'Phantom' },
-  { id: 6, name: 'NEAR' },
+  { id: 3, name: 'Plug' },
+  { id: 4, name: 'Phantom' },
+  { id: 5, name: 'NEAR' },
 
 
 ]

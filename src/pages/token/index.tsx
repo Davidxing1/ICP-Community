@@ -8,32 +8,33 @@ function classNames(...classes) {
 }
 const PLToken=[
   {
-    types:"Studios",
-    usefulness:"Get New Games",
+    types:"Platform",
+    usefulness:"Service Fee Pay  ",
     h1:"For games built by PlayerLink Studios, PL Stakers can earn game tokens/NFTs.",
   },
   {
-    types:"Portal",
-    usefulness:"Earn IGO/INO Tickets",
-    h1:"To participate in IGO/INO, users need to stake PL to enter the lottery.",
+    types:"Foundation",
+    usefulness:"Earn IMO Tickets",
+    h1:"To participate in IMO, users need to stake PL to enter the lottery.",
   },
   {
-    types:"Portal",
+    types:"Community",
     usefulness:"Payment Currency",
-    h1:"PL will be accepted as one of the currencies within the portal.",
+    h1:"PL will be accepted as one of the currencies within the Community.",
   },
   {
-    types:"Protocol",
-    usefulness:"Protocol Usage",
-    h1:"Developers need to stake PL for integration with our protocol.",
-  },
-  {
-    types:"Chain",
+    types:"NetWork",
     usefulness:"Chain Native Token",
     h1:"PL is the native token and acts as gas fee in our PlayerLink Chain.",
   },
   {
-    types:"General",
+    types:"Ventures",
+    usefulness:"Investment Usage",
+    h1:"Community members can use PL and Venture funds to invest in external projects together.",
+  },
+
+  {
+    types:"Community",
     usefulness:"Token Governance",
     h1:"Community treasury will be governed by PL holders in the future.",
   },
@@ -41,19 +42,19 @@ const PLToken=[
 const PLDistribution=[
   {
     title:"Total Supply",
-    amount:"100,000,000",
+    amount:"10,000,000",
   },
   {
     title:"Supply at TGE",
-    amount:"4,000,000 (4.00%)",
+    amount:"170,000 (1.7%)",
   },
   {
-    title:"Supply for the public sale",
-    amount:"1,000,000 (1.0%)",
+    title:"Small Backers ",
+    amount:"100,000 (1.0%)",
   },
   {
-    title:"Public Sale Price",
-    amount:"0.5 USD",
+    title:"Small Backers Price",
+    amount:"2 USD",
   },
 ]
 const PLDetails=[

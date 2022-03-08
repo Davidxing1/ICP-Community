@@ -45,7 +45,8 @@ const Upgrade = () =>{
                   </div>
                 </div>
                   <div className="text-center hover:bg-gray-200 p-5 px-24 transition duration-300">
-                    <img className="w-32" src='https://cdn.discordapp.com/attachments/876498266550853642/950667143261863966/11222.png' alt='' />
+                    <img className="w-32"
+                         src='https://cdn.discordapp.com/attachments/876498266550853642/950742371304341534/3.png' alt='' />
                     <div className="text-3xl pt-3">
                       Stablecoin
                     </div>

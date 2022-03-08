@@ -63,7 +63,7 @@ const Task = () =>{
                 <div className="flex">
                   <Link  href="/task" >
                   <a className="text-center hover:bg-gray-200 p-5 px-24 transition duration-300">
-                    <img className="w-32" src='https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png' alt='' />
+                    <img className="w-32" src='https://cdn.discordapp.com/attachments/876498266550853642/950726454444965888/12.png' alt='' />
                     <div className="text-3xl pt-3">
                       Task
                     </div>
@@ -71,7 +71,7 @@ const Task = () =>{
                   </Link>
                   <Link href="/submit">
                   <a  className="text-center hover:bg-gray-200 p-5 px-24 transition duration-300">
-                    <img className="w-32" src='https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png' alt='' />
+                    <img className="w-32" src='https://cdn.discordapp.com/attachments/876498266550853642/950726608975708190/123.png' alt='' />
                     <div className="text-3xl pt-3">
                       Submit
                     </div>

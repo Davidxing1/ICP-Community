@@ -7,32 +7,38 @@ function classNames(...classes) {
 }
 const PLToken=[
   {
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/950697343743836160/fang.png",
     types:"Platform",
     usefulness:"Service Fee Pay  ",
     h1:"For games built by PlayerLink Studios, PL Stakers can earn game tokens/NFTs.",
   },
   {
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/950697620072972318/sanjiao.png",
     types:"Foundation",
     usefulness:"Earn IMO Tickets",
     h1:"To participate in IMO, users need to stake PL to enter the lottery.",
   },
   {
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/950698338238468126/yuanyuanyuan.png",
     types:"Community",
     usefulness:"Payment Currency",
     h1:"PL will be accepted as one of the currencies within the Community.",
   },
   {
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/950697023974277130/yuanfang.png",
     types:"NetWork",
     usefulness:"Chain Native Token",
     h1:"PL is the native token and acts as gas fee in our PlayerLink Chain.",
   },
   {
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/950697024246919208/yuanyuan.png",
     types:"Ventures",
     usefulness:"Investment Usage",
     h1:"Community members can use PL and Venture funds to invest in external projects together.",
   },
 
   {
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/950697024699912192/sanjiaoyuan.png",
     types:"Community",
     usefulness:"Token Governance",
     h1:"Community treasury will be governed by PL holders in the future.",
@@ -115,12 +121,21 @@ const Team = () =>{
             <div className="mt-10 grid md:grid-cols-2  xl:grid-cols-3 gap-10">
               {PLToken.map(item=>(
               <div key={item.usefulness} className="rounded-2xl bg-black bg-opacity-80 p-5">
-               <div className="text-base text-indigo-400 mb-5">
-                 {item.types}
-                 <div className="text-2xl text-white font-semibold">
-                   {item.usefulness}
-                 </div>
-               </div>
+                <div className="flex">
+                  <div className="mt-2 ">
+                    <img className="w-10 mr-4" src={item.img} alt='' />
+                  </div>
+                  <div>
+                    <div className="text-base text-indigo-400 mb-5">
+                      {item.types}
+                      <div className="text-2xl text-white font-semibold">
+                        {item.usefulness}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
                 <div className="text-gray-400">
                   {item.h1}
                 </div>
@@ -145,7 +160,7 @@ const Team = () =>{
               </div>
               <div className="mt-10 flex justify-center">
                 <img className=" xl:w-7/12"
-                 src='https://cdn.discordapp.com/attachments/876498266550853642/950302756697174076/ad2d8f8e42534dfc.png' alt='' />
+                 src='https://cdn.discordapp.com/attachments/876498266550853642/950761253440208936/002dce4bc678a85a.png' alt='' />
               </div>
 
               <div className="flex flex-col mt-10">

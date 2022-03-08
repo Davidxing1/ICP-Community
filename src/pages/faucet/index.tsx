@@ -16,11 +16,7 @@ const types = [
   { id: 3, name: 'Plug' },
   { id: 4, name: 'Phantom' },
   { id: 5, name: 'NEAR' },
-
-
 ]
-
-
 
 export default function Faucet() {
   const cancelButtonRef = useRef(null)
@@ -76,7 +72,7 @@ export default function Faucet() {
   }
   return (
     <div className="mx-auto dark:bg-current  transition duration-700">
-      <Header></Header>
+      <Header/>
       <div className="bg-black bg-opacity-90 pt-20">
         <div className=" text-center pt-10 ">
           <div className="text-4xl mt-16 font-extrabold  text-gray-200">
@@ -334,7 +330,8 @@ export default function Faucet() {
           </div>
         </Dialog>
       </Transition.Root>
-      <Tail></Tail>
+
+      <Tail/>
     </div>
 
   )

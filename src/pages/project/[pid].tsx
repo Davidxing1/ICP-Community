@@ -1,7 +1,6 @@
 import React, {useEffect} from "react"
 import Header from "../../components/header"
 import Tail from "../../components/tail"
-import Login from '../../components/login';
 import {useRouter} from "next/router";
 
 const news=[
@@ -42,6 +41,52 @@ const news=[
 ]
 
 
+
+
+const ProjectTop = () =>{
+  return(
+    <>
+      <div className="relative">
+        <div className="absolute inset-0">
+          <img
+            className="h-full w-full object-cover"
+            src="https://cdn.discordapp.com/attachments/876498266550853642/934010734264844318/-1.png"
+            alt="People working on laptops"
+          />
+        </div>
+        <div className="max-w-7xl relative px-5 pb-16 pt-16 sm:px-6 sm:pb-24  mx-auto ">
+          <div className="flex py-16 justify-between">
+            <div>
+              <div className="flex ">
+                <div className="mr-5">
+                  <img className="w-10 h-10  border rounded-full " src='https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png' alt='' />
+                </div>
+                <div className="text-white mt-0.5 text-2xl font-semibold">
+                  PlayerLink Task
+                </div>
+              </div>
+              <div className="text-white mt-3 text-gray-400">
+                This list was created by PlayerLink to post bounty tasks.
+              </div>
+            </div>
+            <div className="mt-5 md:mt-0   text-white">
+              <a href="" className="p-2.5 py-2 rounded-full bg-black bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
+                <i className="fa fa-twitter mt-1.5 " aria-hidden="true"></i>
+              </a>
+              <a href="" className="p-2.5 py-2 rounded-full bg-black bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
+                <i className="fa fa fa-medium mt-1.5 " aria-hidden="true"></i>
+              </a>
+              <a href="" className="p-2.5 py-2 rounded-full bg-black bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
+                <i className="fa fa-telegram mt-1.5 " aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
 const Project = () =>{
   const router = useRouter()
 
@@ -52,51 +97,12 @@ const Project = () =>{
 
   return (
     <div className="mx-auto  dark:bg-current  transition duration-700">
-      <Header></Header>
-      <Login></Login>
+      <Header/>
 
       <div className="relative pt-16">
         <div className="absolute inset-x-0 bottom-0    " />
         <div className="bg-black bg-opacity-90 mx-auto">
-           <div className="relative">
-             <div className="absolute inset-0">
-               <img
-                 className="h-full w-full object-cover"
-                 src="https://cdn.discordapp.com/attachments/876498266550853642/934010734264844318/-1.png"
-                 alt="People working on laptops"
-               />
-             </div>
-          <div className="max-w-7xl relative px-5 pb-16 pt-16 sm:px-6 sm:pb-24  mx-auto ">
-            <div className="flex py-16 justify-between">
-              <div>
-                <div className="flex ">
-                  <div className="mr-5">
-                    <img className="w-10 h-10  border rounded-full " src='https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png' alt='' />
-                  </div>
-                  <div className="text-white mt-0.5 text-2xl font-semibold">
-                    PlayerLink Task
-                  </div>
-                </div>
-                <div className="text-white mt-3 text-gray-400">
-                  This list was created by PlayerLink to post bounty tasks.
-                </div>
-              </div>
-                <div className="mt-5 md:mt-0   text-white">
-                  <a href="" className="p-2.5 py-2 rounded-full bg-black bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
-                    <i className="fa fa-twitter mt-1.5 " aria-hidden="true"></i>
-                  </a>
-                  <a href="" className="p-2.5 py-2 rounded-full bg-black bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
-                    <i className="fa fa fa-medium mt-1.5 " aria-hidden="true"></i>
-                  </a>
-                  <a href="" className="p-2.5 py-2 rounded-full bg-black bg-opacity-40 mr-5 transition duration-300 hover:bg-opacity-80">
-                    <i className="fa fa-telegram mt-1.5 " aria-hidden="true"></i>
-                  </a>
-                </div>
-            </div>
-            </div>
-            </div>
-
-
+          <ProjectTop/>
             <div className="max-w-7xl relative px-5 py-8 md:py-12 xl:py-24 sm:px-6  mx-auto ">
               <div className="flex ">
                 <div className="flex justify-center z-10 text-gray-700 text-3xl py-3 ml-4 -mr-11">
@@ -124,15 +130,11 @@ const Project = () =>{
 
                     </div>
                   </a> ))}
-
-
               </div>
             </div>
-
           </div>
-
       </div>
-      <Tail></Tail>
+      <Tail/>
     </div>
   )
 }

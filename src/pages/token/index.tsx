@@ -1,7 +1,6 @@
 import React from "react"
 import Header from "../../components/header"
 import Tail from "../../components/tail"
-import Login from '../../components/login';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -95,12 +94,13 @@ const PLDetails=[
     vesting:"",
   },
 ]
+
+
 const Team = () =>{
 
   return (
     <div className="mx-auto  dark:bg-current  transition duration-700">
-      <Header></Header>
-      <Login></Login>
+      <Header/>
       <div className="relative pt-16">
         <div className="absolute inset-x-0 bottom-0" />
         <div className="bg-black bg-opacity-90 mx-auto">
@@ -144,7 +144,8 @@ const Team = () =>{
                   </div> ))}
               </div>
               <div className="mt-10 flex justify-center">
-                <img className=" xl:w-7/12" src='https://cdn.discordapp.com/attachments/876498266550853642/950302756697174076/ad2d8f8e42534dfc.png' alt='' />
+                <img className=" xl:w-7/12"
+                 src='https://cdn.discordapp.com/attachments/876498266550853642/950302756697174076/ad2d8f8e42534dfc.png' alt='' />
               </div>
 
               <div className="flex flex-col mt-10">
@@ -190,7 +191,7 @@ const Team = () =>{
           </div>
         </div>
       </div>
-      <Tail></Tail>
+      <Tail/>
     </div>
   )
 }

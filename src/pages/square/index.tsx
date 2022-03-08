@@ -1,8 +1,6 @@
 import React from "react"
 import Header from "../../components/header"
 import Tail from "../../components/tail"
-import Login from '../../components/login';
-
 
 const spaces=[
   {
@@ -79,14 +77,11 @@ const spaces=[
   },
 ]
 
-
 const Square = () =>{
 
   return (
     <div className="mx-auto  dark:bg-current  transition duration-700">
-      <Header></Header>
-      <Login></Login>
-
+      <Header/>
       <div className="relative pt-16">
         <div className="absolute inset-x-0 bottom-0    " />
         <div className="bg-black bg-opacity-90 mx-auto">
@@ -111,12 +106,11 @@ const Square = () =>{
                   </div>
                 </a>
               ))}
-
             </div>
           </div>
         </div>
       </div>
-      <Tail></Tail>
+      <Tail/>
     </div>
   )
 }

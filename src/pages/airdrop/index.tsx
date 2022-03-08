@@ -30,9 +30,7 @@ export default function Airdrop() {
   }
   return (
     <div className="min-h-screen bg-white">
-      <header>
-        <Header></Header>
-      </header>
+        <Header/>
       <main>
         <div>
           <div className="relative pt-16">
@@ -96,8 +94,7 @@ export default function Airdrop() {
           </div>
         </div>
       </main>
-
-      <Tail></Tail>
+      <Tail/>
     </div>
   );
 }

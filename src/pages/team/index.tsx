@@ -1,7 +1,6 @@
 import React from "react"
 import Header from "../../components/header"
 import Tail from "../../components/tail"
-import Login from '../../components/login';
 
 
 const team=[
@@ -82,7 +81,6 @@ const Mediatext=[
     h2:"Alibaba's SCMP follows TIME Magazine, Launches ARTIFACTs NFTs to Tokenize Media Assets",
   },
 ]
-
 const awards=[
   {
     id:"1",
@@ -100,13 +98,68 @@ const awards=[
   },
 ]
 
+const Media = () =>{
+  return(
+    <>
+      <div className="bg-black bg-opacity-30 mx-auto">
+        <div className="max-w-7xl  relative px-5 pb-16 pt-24 sm:px-6 sm:pb-24 lg:pb-32 mx-auto ">
+          <div>
+            <h1 className="text-blue-400  text-base md:text-lg mb-3">Media</h1>
+            <h2 className="text-white text-2xl md:text-4xl font-medium">PlayLink in  Media</h2>
+          </div>
+          <div className="mt-5 flex grid md:grid-cols-2 xl:grid-cols-3 ">
+            {Mediatext.map((item)=>(
+              <a key={item.id} className="transform hover:scale-105 duration-300" href={item.href}>
+                <div  className="mx-2 my-4">
+                  <img className="rounded-lg   "
+                       src={item.img} alt=""/>
+                  <div className="mt-4">
+                    <h1 className="text-white text-lg font-semibold mb-2">{item.h1}</h1>
+                    <h2 className="text-gray-400">{item.h2}</h2>
+                  </div>
+                </div></a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+const TeamAwards = () =>{
+  return(
+    <>
+      <div className="bg-black bg-opacity-30 mx-auto">
+        <div className="max-w-7xl  relative px-5 pb-16 pt-24 sm:px-6 sm:pb-24 lg:pb-32 mx-auto ">
+          <div>
+            <h2 className="text-white text-2xl md:text-4xl font-medium text-center">
+              Team Awards
+            </h2>
+          </div>
+          <div className="mt-5 md:flex grid md:grid-cols-2 justify-between  mx-auto ">
+            {awards.map((item)=>(
+              <a key={item.id} className="transform hover:scale-105 duration-300" href={item.href}>
+                <div  className="md:mx-10 my-4  md:w-10/12">
+                  <img className="rounded-t-lg  bg-black "
+                       src={item.img} alt=""/>
+                  <div className="p-10 bg-black bg-opacity-70 h-44 rounded-b-lg">
+                    <h1 className="text-white text-xl font-semibold mb-2">{item.h1}</h1>
+                    <h2 className="text-gray-400 ">{item.h2}</h2>
+                  </div>
+                </div></a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
 const Team = () =>{
 
   return (
     <div className="mx-auto  dark:bg-current  transition duration-700">
-      <Header></Header>
-      <Login></Login>
-
+      <Header/>
       <div className="relative pt-16">
         <div className="absolute inset-x-0 bottom-0    " />
         <div className="bg-black bg-opacity-90 mx-auto">
@@ -132,54 +185,11 @@ const Team = () =>{
               ))}
             </div>
           </div>
-          <div className="bg-black bg-opacity-30 mx-auto">
-          <div className="max-w-7xl  relative px-5 pb-16 pt-24 sm:px-6 sm:pb-24 lg:pb-32 mx-auto ">
-            <div>
-              <h1 className="text-blue-400  text-base md:text-lg mb-3">Media</h1>
-              <h2 className="text-white text-2xl md:text-4xl font-medium">PlayLink in  Media</h2>
-            </div>
-            <div className="mt-5 flex grid md:grid-cols-2 xl:grid-cols-3 ">
-              {Mediatext.map((item)=>(
-                <a key={item.id} className="transform hover:scale-105 duration-300" href={item.href}>
-                  <div  className="mx-2 my-4">
-                    <img className="rounded-lg   "
-                         src={item.img} alt=""/>
-                    <div className="mt-4">
-                      <h1 className="text-white text-lg font-semibold mb-2">{item.h1}</h1>
-                      <h2 className="text-gray-400">{item.h2}</h2>
-                    </div>
-                  </div></a>
-              ))}
-            </div>
-        </div>
-          </div>
-
-          <div className="bg-black bg-opacity-30 mx-auto">
-            <div className="max-w-7xl  relative px-5 pb-16 pt-24 sm:px-6 sm:pb-24 lg:pb-32 mx-auto ">
-              <div>
-                <h2 className="text-white text-2xl md:text-4xl font-medium text-center">
-                  Team Awards
-                </h2>
-              </div>
-              <div className="mt-5 md:flex grid md:grid-cols-2 justify-between  mx-auto ">
-                {awards.map((item)=>(
-                  <a key={item.id} className="transform hover:scale-105 duration-300" href={item.href}>
-                    <div  className="md:mx-10 my-4  md:w-10/12">
-                      <img className="rounded-t-lg  bg-black "
-                           src={item.img} alt=""/>
-                      <div className="p-10 bg-black bg-opacity-70 h-44 rounded-b-lg">
-                        <h1 className="text-white text-xl font-semibold mb-2">{item.h1}</h1>
-                        <h2 className="text-gray-400 ">{item.h2}</h2>
-                      </div>
-                    </div></a>
-                ))}
-              </div>
-            </div>
-          </div>
-
+          <Media/>
+          <TeamAwards/>
           </div>
       </div>
-      <Tail></Tail>
+      <Tail/>
     </div>
   )
 }

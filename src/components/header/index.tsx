@@ -1,4 +1,4 @@
-import { Popover, Tab, Transition } from '@headlessui/react';
+import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
 import Link from "next/link";
 import {MenuIcon, XIcon} from "@heroicons/react/outline";
 import React, { Fragment, useEffect, useRef, useState } from 'react';
@@ -7,8 +7,8 @@ import {
   WalletButtonShowState,
   WalletListShowState,
   AccountConfigPageState,
-  AfterEvmAddressValue, AccountChooseValue, AfterNearAddressValue
-} from "../jotai";
+  AfterEvmAddressValue, AccountChooseValue, AfterNearAddressValue, TaskState,
+} from '../jotai';
 import { useAtom } from 'jotai';
 import Login from '../login';
 import Account from '../account';
@@ -21,16 +21,71 @@ function classNames(...classes) {
 }
 const navigation = [
   { id:1 ,name: 'Explore', href: '/explore' },
-  { id:2 ,name: 'Task', href: '/task' },
-  // { id:3 ,name: 'Submit', href: '/submit' },
-  { id:3 ,name: 'Square', href: '/square' },
-  { id:4 ,name: 'Faucet', href: '/faucet' },
-  { id:5 ,name: 'Airdrop', href: '/airdrop' },
-  { id:6 ,name: 'Docs', href: '/airdrop' },
-  { id:7 ,name: 'Token', href: '/token' },
-  { id:8 ,name: 'Team', href: '/team' },
+  { id:2 ,name: 'Square', href: '/square' },
+  { id:3 ,name: 'Faucet', href: '/faucet' },
+  { id:4 ,name: 'Airdrop', href: '/airdrop' },
+  { id:5 ,name: 'Docs', href: 'https://mirror.xyz/0x72190f3Ad0fdfc11c674435b12b0752949d76597/zvNbExNS6fwPT7kzkgu6EHrd9gSzcCeoXGms8kZd_DA' },
+  { id:6 ,name: 'Token', href: '/token' },
+  { id:7 ,name: 'Team', href: '/team' },
 ]
+const Task = () =>{
+  const [OpenTaskState,SetOpenTaskState]=useAtom(TaskState)
 
+  return(
+    <>
+      <Transition.Root show={OpenTaskState} as={Fragment}>
+        <Dialog as="div" className="fixed z-20 inset-0 overflow-y-auto " onClose={SetOpenTaskState}>
+          <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 -mt-40 md:-mt-0 text-center sm:block sm:p-0">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+            </Transition.Child>
+            <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;
+          </span>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+              enterTo="opacity-100 translate-y-0 sm:scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+              leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            >
+              <div className="inline-block align-bottom bg-white rounded-lg  px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:y-8 sm:align-middle  p-6  ">
+
+                <div className="flex">
+                  <Link  href="/task" >
+                  <a className="text-center hover:bg-gray-200 p-5 px-24 transition duration-300">
+                    <img className="w-32" src='https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png' alt='' />
+                    <div className="text-3xl pt-3">
+                      Task
+                    </div>
+                  </a>
+                  </Link>
+                  <Link href="/submit">
+                  <a  className="text-center hover:bg-gray-200 p-5 px-24 transition duration-300">
+                    <img className="w-32" src='https://cdn.discordapp.com/attachments/876498266550853642/948887549500325888/121.png' alt='' />
+                    <div className="text-3xl pt-3">
+                      Submit
+                    </div>
+                  </a>
+                  </Link>
+                </div>
+              </div>
+            </Transition.Child>
+          </div>
+        </Dialog>
+      </Transition.Root>
+    </>
+  )
+}
 
 const WalletList = () => {
   const router = useRouter()
@@ -40,7 +95,7 @@ const WalletList = () => {
   const [AfterEVMAddress,] = useAtom(AfterEvmAddressValue)
   const [AfterNearAddress,] = useAtom(AfterNearAddressValue)
   const [AccountChoose,] = useAtom(AccountChooseValue)
-
+  const [,SetOpenTaskState]=useAtom(TaskState)
   useEffect(()=>{
     if (AccountChoose != 0){
       SetWalletButtonShow(true)
@@ -56,8 +111,9 @@ const WalletList = () => {
     SetAccountConfig(true)
   }
 
-
-
+  function OpenTask() {
+    SetOpenTaskState(true)
+  }
   return (
       <>
         <Popover className="relative bg-white  ">
@@ -76,7 +132,6 @@ const WalletList = () => {
                   </a></Link>
               </div>
               <Tab.Group as="nav" className="hidden  lg:flex  space-x-10 py-3 pt-3 pl-10">
-
                 {navigation.map((item) => (
                     <Tab.List key={item.name}>
                       <Link  href={item.href}>
@@ -92,11 +147,14 @@ const WalletList = () => {
                           }>
                             {item.name}
                           </Tab>
-
                         </a>
                       </Link>
                     </Tab.List>
                 ))}
+                <button onClick={OpenTask} className="w-full py-2.5 text-sm leading-5  rounded-lg text-base font-medium text-black  text-white
+                                  focus: ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60">
+                  Task
+                </button>
               </Tab.Group>
             </div>
 
@@ -119,12 +177,10 @@ const WalletList = () => {
                   <div className="flex items-center mr-4 p-2">
                     <img className="w-6 h-6 rounded-lg mx-1"
                          src='https://portal.web3games.org/_next/image?url=%2Fnetworks%2Fethereum-network.jpg&w=48&q=75' alt='' />
-
                     <div className=" text-white w-16">
                       Ethereum
                     </div>
                   </div>
-
                   <button  onClick={accountConfig} className=" bg-gray-600 rounded-full truncate  w-40 px-4 py-2 text-white rounded-lg  flex  ">
                     {AfterEVMAddress}
                   </button>
@@ -132,7 +188,6 @@ const WalletList = () => {
               </div>
             </div>
           </div>
-
           <div className="fixed z-20 inset-x-0">
             <Transition
                 as={Fragment}
@@ -177,6 +232,9 @@ const WalletList = () => {
                             </a>
                           </Link>
                       ))}
+                      <div className="text-base font-medium text-gray-900  dark:text-white   transition duration-700">
+                        Task
+                      </div>
                     </div>
 
 
@@ -207,6 +265,7 @@ const Header=()=>{
       <Login/>
       <WalletList/>
       <Account/>
+     <Task/>
     </header>
   )
 }

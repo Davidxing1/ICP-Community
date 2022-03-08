@@ -1,13 +1,12 @@
 import React from "react"
 import Header from "../../components/header"
 import Tail from "../../components/tail"
-import Login from '../../components/login';
 import Link from "next/link";
 
 
 
 const ClaimedTask = () =>{
-  const Copy=()=> {
+  function Copy()  {
     // @ts-ignore
     const spanText = document.getElementById("name").value;
     const oInput = document.createElement('input');
@@ -19,12 +18,9 @@ const ClaimedTask = () =>{
     oInput.style.display = 'none';
     document.body.removeChild(oInput);
   }
-
   return (
     <div className="mx-auto  dark:bg-current  transition duration-700">
-      <Header></Header>
-      <Login></Login>
-
+      <Header/>
       <div className="relative pt-16">
         <div className="absolute inset-x-0 bottom-0    " />
         <div className="bg-black bg-opacity-90 mx-auto">
@@ -32,13 +28,11 @@ const ClaimedTask = () =>{
             <div className="text-white text-5xl">
               Task In Progress
             </div>
-
             <div className="mt-16 ">
               <div className="bg-gray-700 bg-opacity-20 text-white rounded-3xl  cursor-auto p-10   ">
                 <div className="text-xl md:text-2xl mb-10">
                   Task Information
                 </div>
-
                 <div className="md:flex  text-xl ">
                   <div>
                     Task Logo
@@ -57,10 +51,8 @@ const ClaimedTask = () =>{
                         <div className="mt-3 md:p-5  h-28 flex rounded-2xl border-dashed border border-gray-500 hover:border-white transition duration-300">
                           {/*  image*/}
                         </div>
-
                       </a>
                     </Link>
-
                   </div>
                 </div>
                 <div className="text-xl mt-10  md:flex">
@@ -73,7 +65,6 @@ const ClaimedTask = () =>{
                              id="name"
                       />
                     </div>
-
                   </div>
                   <div className="md:mt-5">
                     <button onClick={Copy} className="px-2 h-8 md:h-11  md:ml-5  text-sm  text-black mt-5 bg-gray-400  rounded-xl md:rounded-2xl">
@@ -95,7 +86,7 @@ const ClaimedTask = () =>{
           </div>
         </div>
       </div>
-      <Tail></Tail>
+      <Tail/>
     </div>
   )
 }

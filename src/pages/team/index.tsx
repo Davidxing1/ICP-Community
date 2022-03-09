@@ -33,7 +33,37 @@ const team=[
     img:"https://cdn.discordapp.com/attachments/897398778166906911/950273522666700830/unknown.png",
     name:"FengFeng",
     position:"Core Contributor"
-  }
+  },
+  {
+    img:"",
+    name:"FengFeng",
+    position:"Core Contributor"
+  },
+  {
+    img:"",
+    name:"FengFeng",
+    position:"Core Contributor"
+  },
+  {
+    img:"",
+    name:"FengFeng",
+    position:"Core Contributor"
+  },
+  {
+    img:"",
+    name:"FengFeng",
+    position:"Core Contributor"
+  },
+  {
+    img:"",
+    name:"FengFeng",
+    position:"Core Contributor"
+  },
+  {
+    img:"",
+    name:"FengFeng",
+    position:"Core Contributor"
+  },
 
 
 ]

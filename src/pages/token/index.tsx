@@ -160,7 +160,7 @@ const Team = () =>{
               </div>
               <div className="mt-10 flex justify-center">
                 <img className=" xl:w-7/12"
-                 src='https://cdn.discordapp.com/attachments/876498266550853642/950761253440208936/002dce4bc678a85a.png' alt='' />
+                 src='https://cdn.discordapp.com/attachments/876498266550853642/950964463090167808/c05de8b1e3013d15.png' alt='' />
               </div>
 
               <div className="flex flex-col mt-10">

@@ -12,6 +12,7 @@ import {
   AccountDepositState
 } from '../jotai';
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -380,6 +381,14 @@ const FunctionList = () =>{
                 <i className="fa fa-university mt-0.5 mr-1 " aria-hidden="true"></i>
                 <div>Deposit </div>
               </button>
+            </div>
+            <div className="flex text-sm text-gray-800 transition duration-500 hover:text-blue-400 w-28">
+              <Link href="/rank">
+              <a  className="flex text-sm text-gray-800 transition duration-500 hover:text-blue-400 w-28">
+                <i className="fa fa-bar-chart mt-0.5 mr-1 " aria-hidden="true"></i>
+                <div>Ranking</div>
+              </a>
+              </Link>
             </div>
 
           </div>

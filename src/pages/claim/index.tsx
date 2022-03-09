@@ -132,6 +132,18 @@ const Claim = () =>{
               <div className=" flex justify-center my-6 xl:my-10 ">
                 <img className="h-8 w-18" src="https://cdn.discordapp.com/attachments/876498266550853642/949239933556645938/Pl.png" alt=""/>
               </div>
+
+              <div className="flex mb-5">
+              <div className="relative rounded-lg w-full bg-white ">
+                <div className=" w-72 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg animate-pulse">
+                  <div className="text-center">
+                    72/100
+                  </div>
+                </div>
+              </div>
+
+              </div>
+
               <div className="hidden xl:inline-block   px-12 ">
                 <div  className={WalletButtonShow?"hidden":"flex justify-center mb-2  mx-auto"}>
                   <button onClick={()=>{

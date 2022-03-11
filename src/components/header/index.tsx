@@ -63,7 +63,7 @@ const Task = () =>{
                 <div className="md:flex">
                   <Link  href="/task" >
                   <a className="text-center hover:bg-gray-200 p-5 px-24 transition duration-300">
-                    <img className="w-32" src='/task.png' alt='' />
+                    <img className="w-32 mx-auto" src='/task.png' alt='' />
                     <div className="text-3xl pt-3">
                       Task
                     </div>
@@ -71,7 +71,7 @@ const Task = () =>{
                   </Link>
                   <Link href="/submit">
                   <a  className="text-center hover:bg-gray-200 p-5 px-24 transition duration-300">
-                    <img className="w-32 " src='/submit.png' alt='' />
+                    <img className="w-32 mx-auto" src='/submit.png' alt='' />
                     <div className="text-3xl pt-3">
                       Submit
                     </div>
@@ -232,7 +232,7 @@ const WalletList = () => {
                             </a>
                           </Link>
                       ))}
-                      <div className="text-base font-medium text-gray-900  dark:text-white   transition duration-700">
+                      <div onClick={OpenTask} className="text-base font-medium text-gray-900  dark:text-white   transition duration-700">
                         Task
                       </div>
                     </div>

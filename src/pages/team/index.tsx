@@ -35,33 +35,33 @@ const team=[
     position:"Core Contributor"
   },
   {
-    img:"",
-    name:"FengFeng",
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/951105871990095942/88e3df7984f9ffc7.png",
+    name:"George",
     position:"Core Contributor"
   },
   {
-    img:"",
-    name:"FengFeng",
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/951105873785257994/7bf40378b0f5849b.png ",
+    name:"Ben",
     position:"Core Contributor"
   },
   {
-    img:"",
-    name:"FengFeng",
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/951105872912850964/7ed7da1aad5eb36a.png",
+    name:"GuangHui",
     position:"Core Contributor"
   },
   {
-    img:"",
-    name:"FengFeng",
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/951105873202262146/t.png",
+    name:"XueYou",
     position:"Core Contributor"
   },
   {
-    img:"",
-    name:"FengFeng",
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/951105873533632554/t.png",
+    name:"Bonnie",
     position:"Core Contributor"
   },
   {
-    img:"",
-    name:"FengFeng",
+    img:"https://cdn.discordapp.com/attachments/876498266550853642/951105872455692348/cc2165ae4a05d3e5.png",
+    name:"DuoDuo",
     position:"Core Contributor"
   },
 

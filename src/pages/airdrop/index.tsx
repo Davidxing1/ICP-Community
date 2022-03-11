@@ -45,7 +45,7 @@ export default function Airdrop() {
                   />
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-32 xl:py-48">
-                  <div className="w-1/2">
+                  <div className="xl:w-1/2">
                     <span className="block text-white text-4xl  tracking-tight  pb-12">Estimated PlayerLink Airdrop Rewards</span>
                     <span className="block text-xl text-white">Use this calculator to estimate how much you`ll receive if the public loan ends now.
                                     </span>
